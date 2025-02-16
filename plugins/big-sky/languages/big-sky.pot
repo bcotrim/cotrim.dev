@@ -1,0 +1,1677 @@
+# Copyright (C) 2025 Automattic, Inc.
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Big Sky 4.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/big-sky-plugin\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-02-03T22:36:31+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: big-sky\n"
+
+#. Plugin Name of the plugin
+#: big-sky.php
+#: big-sky.php:296
+msgid "Big Sky"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: big-sky.php
+msgid "https://automattic.com/"
+msgstr ""
+
+#. Description of the plugin
+#: big-sky.php
+msgid "The Big Sky AI Site Builder."
+msgstr ""
+
+#. Author of the plugin
+#: big-sky.php
+msgid "Automattic, Inc."
+msgstr ""
+
+#: big-sky.php:149
+msgid "Enable AI-powered site building experience"
+msgstr ""
+
+#: big-sky.php:157
+msgid "AI Features"
+msgstr ""
+
+#: big-sky.php:268
+#: big-sky.php:269
+msgid "Big Sky checks"
+msgstr ""
+
+#: big-sky.php:293
+msgid "Big Sky Checks"
+msgstr ""
+
+#: big-sky.php:301
+msgid "Big Sky did not find any known issues with your site."
+msgstr ""
+
+#: big-sky.php:312
+msgid "The Assembler theme is not active. Big Sky requires the Assembler theme to be active."
+msgstr ""
+
+#: big-sky.php:317
+msgid "The Assembler theme is active."
+msgstr ""
+
+#: big-sky.php:326
+msgid "Jetpack is not installed. Big Sky requires Jetpack to be installed and active."
+msgstr ""
+
+#: big-sky.php:331
+msgid "Jetpack is installed."
+msgstr ""
+
+#: big-sky.php:340
+msgid "Jetpack is not connected. Big Sky requires Jetpack to be connected."
+msgstr ""
+
+#: big-sky.php:345
+msgid "Jetpack is connected."
+msgstr ""
+
+#: big-sky.php:354
+msgid "Jetpack does not have a connected admin. Big Sky requires Jetpack to be connected to an admin."
+msgstr ""
+
+#: big-sky.php:359
+msgid "Jetpack is connected to an admin."
+msgstr ""
+
+#: big-sky.php:367
+msgid "Mapbox API key is not set. Big Sky requires a Mapbox API key to be set."
+msgstr ""
+
+#: big-sky.php:372
+msgid "Mapbox API key is set."
+msgstr ""
+
+#: big-sky.php:382
+msgid "Change it."
+msgstr ""
+
+#: big-sky.php:386
+msgid "The home page is not set to a static page. Big Sky requires a static page to be set as the home page."
+msgstr ""
+
+#: big-sky.php:392
+msgid "The home page is set to a static page."
+msgstr ""
+
+#. translators: $d is the number of performance issues found.
+#: big-sky.php:402
+msgid "Big Sky is affected by %d issue"
+msgid_plural "Big Sky is affected by %d issues"
+msgstr[0] ""
+msgstr[1] ""
+
+#: big-sky.php:403
+msgid "Big Sky detected the following issues with your site:"
+msgstr ""
+
+#: big-sky.php:417
+msgid "These checks passed:"
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:298
+msgid "Which of these palettes would you like?"
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:330
+msgid "Select the block you wish to update and try again."
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:358
+msgid "The selected block does not support text color. Please select a different block and try again."
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:369
+msgid "The selected block does not support background color. Please select a different block and try again."
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:486
+msgid "Let me know if you need me to do anything else!"
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:487
+msgid "Do you wish to change any other colors?"
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:488
+msgid "Is there anything else you'd like me to adjust?"
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:492
+msgid "for your site"
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:494
+msgid "in this section"
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:496
+msgid "of the selected block"
+msgstr ""
+
+#. translators: 1: list of updated color components, 2: context (for your site/in this section)
+#: src/ai/assistants/color/tools/use-tool-functions.js:500
+msgid "I've updated the %1$s %2$s."
+msgstr ""
+
+#: src/ai/assistants/color/tools/use-tool-functions.js:503
+msgid " and "
+msgstr ""
+
+#: src/ai/assistants/color/use-color-toolkit.js:88
+msgid "Please provide a color or a category to view color options."
+msgstr ""
+
+#. Translators: %s is the new address.
+#: src/ai/assistants/content/tools/address/use-tool-functions.js:67
+msgid "Your address has been updated to \"%s\"."
+msgstr ""
+
+#: src/ai/assistants/content/tools/button/use-tool-functions.js:58
+msgid "The link has been updated."
+msgstr ""
+
+#: src/ai/assistants/content/tools/button/use-tool-functions.js:70
+msgid "Sorry, I can't perform this action at this time."
+msgstr ""
+
+#: src/ai/assistants/content/tools/button/use-tool-functions.js:82
+msgid "Sorry, the provided social media service is not supported."
+msgstr ""
+
+#. Translators: %1$s is the social link service, %2$s is the action (added/updated).
+#: src/ai/assistants/content/tools/button/use-tool-functions.js:131
+msgid "The social link button for %1$s has been %2$s."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:40
+msgid "Invalid action specified."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:100
+msgid "I have added the requested fields to the contact form."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:175
+msgid "I've updated a field for you."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:176
+msgid "I've updated some fields for you."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:178
+msgid "I was not able to update any fields."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:184
+msgid "I could not update the following fields:"
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:246
+msgid "I deleted a field for you."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:247
+msgid "I deleted some fields for you."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:253
+msgid "I could not delete the following fields:"
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:260
+msgid "No fields were deleted."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:269
+msgid "No contact form block found on this page. Have you added one yet?"
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:277
+msgid "Please specify the field(s) to modify in the contact form."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:288
+msgid "I cannot delete the button field, as it is required to submit the form. Instead, I can change the label for you."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:299
+msgid "The contact form can only have one button. I can change the button's label for you, if you like."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:311
+msgid "It seems that a field type you specified is not valid. Please specify a valid field type in the contact form."
+msgstr ""
+
+#: src/ai/assistants/content/tools/contact-form/use-tool-functions.js:319
+msgid "Something went wrong when trying to modify the contact form. Please try again."
+msgstr ""
+
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:84
+#: src/ai/tasks/replace-content/use-replace-content.js:112
+msgid "I have replaced the content."
+msgstr ""
+
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:122
+msgid "Please provide a title for the menu section."
+msgstr ""
+
+#. translators: %s is the name of the pattern category.
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:132
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:310
+msgid "No %s pattern found."
+msgstr ""
+
+#. translators: %s is the name of the pattern category.
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:142
+msgid "No %s sections block found."
+msgstr ""
+
+#. translators: %s is the name of the pattern category.
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:276
+msgid "I have added a new %s section."
+msgstr ""
+
+#. translators: %s is the name of the pattern category.
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:282
+msgid "There was an issue updating the content for the new %s section."
+msgstr ""
+
+#. translators: %s is the name of the pattern category.
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:323
+msgid "Select a %s section to add items to."
+msgstr ""
+
+#. translators: %s is the name of the pattern category.
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:441
+msgid "I have added new %s items."
+msgstr ""
+
+#. translators: %s is the name of the pattern category.
+#: src/ai/assistants/content/tools/content/use-tool-functions.js:447
+msgid "There was an issue updating the content for the new %s item."
+msgstr ""
+
+#: src/ai/assistants/content/tools/make-text-bold-italic/use-tool-functions.js:30
+msgid "Please select a single block that contains the text you want to format."
+msgstr ""
+
+#: src/ai/assistants/content/tools/make-text-bold-italic/use-tool-functions.js:81
+msgid "Content has been formatted successfully."
+msgstr ""
+
+#: src/ai/assistants/content/tools/make-text-bold-italic/use-tool-functions.js:84
+msgid "Failed to format the content."
+msgstr ""
+
+#: src/ai/assistants/font/use-font-toolkit.js:83
+msgid "Please provide a font or a category to view font options."
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-odie/use-ask-odie-tool.js:23
+msgid "I don't know the answer to that question."
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:14
+msgid "Here's a list of things I can help you with:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:17
+msgid "Updating text"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:17
+msgid "Updating an image or logo"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:20
+msgid "Changing your site colors"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:20
+msgid "Changing your site fonts"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:23
+msgid "Changing your site layout"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:23
+msgid "Adding or replacing a section"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:26
+msgid "Adding a new page"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:26
+msgid "Adding or updating a social link"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:29
+msgid "Updating your address"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:29
+msgid "Also feel free to click around the editor and see the services I can provide!"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:38
+msgid "To update your address:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:38
+msgid "Ask me to \"Update my address to {address}\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:41
+msgid "I'll update the address on your site and any maps that use it"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:50
+msgid "If you'd like me to add a social link to your site:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:53
+msgid "Ask me to \"Add a social link for my {social network url}\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:56
+msgid "I'll add the new social link to the header and/or footer of your site"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:59
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:86
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:110
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:149
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:173
+msgid "If you'd like to do this manually:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:62
+msgid "Click on the social links block in the editor"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:65
+msgid "Click the \"+\" button"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:65
+msgid "Select or browse for your desired social network"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:68
+msgid "Click on the added social link and enter your URL"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:77
+msgid "If you'd like me to update a social link on your site:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:80
+msgid "Ask me to \"Update the {social network} social link to {social network url}\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:83
+msgid "I'll update the corresponding social links in the header and/or footer of your site"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:89
+msgid "Click on the social link you want to update in the editor"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:92
+msgid "Enter your URL"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:98
+msgid "If you'd like me to help you update your site colors:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:101
+msgid "Ask me to \"Change my site colors\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:104
+msgid "Provide me with a list of specific colors you'd like to use, or a type of color scheme you'd like to use (e.g. \"pastel\", \"vibrant\", \"muted\", etc.)"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:107
+msgid "I'll provide you a list of color palettes to choose from"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:113
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:152
+msgid "Click on the \"Styles\" button in the top toolbar"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:116
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:155
+msgid "Click on \"Browse styles\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:116
+msgid "Select from one of the predefined color palettes"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:125
+msgid "Here are some examples you can give me to update the contact form on your site:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:128
+msgid "add a phone number field"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:128
+msgid "make the message field required"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:131
+msgid "remove the email field"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:137
+msgid "If you'd like me to help you update your site fonts:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:140
+msgid "Ask me to \"Change my site fonts\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:143
+msgid "Provide me with a list of specific fonts you'd like to use, or a type of font scheme you'd like to use (e.g. \"serif\", \"sans-serif\", \"modern\", etc.)"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:146
+msgid "I'll provide you a list of font sets to choose from"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:155
+msgid "Select from one of the predefined font sets"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:164
+msgid "If you'd like me to help you update an image:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:167
+msgid "Select an image in the editor"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:170
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:200
+msgid "Click \"Regenerate\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:170
+msgid "Ask me to \"Generate an image using AI\" or \"Find an image from stock\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:176
+msgid "Drag any image on top of one in the editor to replace it"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:179
+msgid "Select an image and click \"Replace\" in the top toolbar"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:188
+msgid "If you already have a logo image you want to use:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:191
+msgid "Ask me to \"update the logo\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:191
+msgid "Drop your logo image into the chat box and I'll do the rest!"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:194
+msgid "If you want me to generate a new logo for you:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:197
+msgid "Select the logo image in the editor"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:200
+msgid "Click \"Make a logo using AI\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:209
+msgid "To update your site layout:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:212
+msgid "Ask me to \"Change my site layout\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:215
+msgid "I'll provide you with a list of layouts to choose from"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:218
+msgid "To generate a new layout, click on the last empty layout in the list"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:227
+msgid "I can't help with adjusting spacing yet, but you can adjust this yourself:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:231
+msgid "Learn about editing block spacing"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:239
+msgid "To update text on your site:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:242
+msgid "Click on the text you want to change"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:245
+msgid "Start typing to make changes"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:245
+msgid "You'll find some tools in the top toolbar to change style and alignment"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:248
+msgid "You can also ask me to generate or rewrite text"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:258
+msgid "To add a section to your site:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:261
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:279
+msgid "Select a section in the editor"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:264
+msgid "Click \"Add Pattern\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:264
+msgid "Specify which section you would like to add by either selecting one from the list or telling me the type of section (e.g. \"menu\", \"services\", \"about\", etc.)"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:267
+msgid "You can also specify if you want the new section added before or after the one selected"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:276
+msgid "To replace a section on your site:"
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:282
+msgid "Ask me to \"Replace this section\""
+msgstr ""
+
+#: src/ai/assistants/help/tools/ask-wordpress-expert/answers.js:285
+msgid "I'll provide you with a list of different section options you can choose from"
+msgstr ""
+
+#: src/ai/assistants/help/use-help-toolkit.js:56
+msgid "Please provide a question to ask the WordPress expert."
+msgstr ""
+
+#: src/ai/assistants/image/tools/upload-site-logo/use-upload-site-logo-tool.js:65
+msgid "I have updated the site logo."
+msgstr ""
+
+#: src/ai/assistants/image/tools/upload-site-logo/use-upload-site-logo-tool.js:68
+msgid ""
+"I have updated the site logo! However, I notice neither the header nor footer contains a site logo.\n"
+"\n"
+"To change the header/footer layouts, ask me to \"**replace the header/footer section**\"."
+msgstr ""
+
+#: src/ai/assistants/image/tools/upload-site-logo/use-upload-site-logo-tool.js:74
+#: src/ai/tasks/replace-content/use-replace-content.js:392
+#: src/ai/tasks/replace-content/use-replace-content.js:415
+#: src/hooks/use-images.js:255
+#: src/hooks/use-images.js:403
+msgid "I encountered an error while processing your request. Please try again."
+msgstr ""
+
+#. Translators: %s is a comma-separated list of allowed file types.
+#: src/ai/assistants/image/use-image-toolkit.test.js:217
+msgid "Please provide a valid image file. Allowed file types: %s"
+msgstr ""
+
+#: src/ai/assistants/layout/tools/show-layout-picker/use-show-layout-picker-tool.js:101
+msgid "Which of these layouts would you like?"
+msgstr ""
+
+#. Translators: %s is the page title.
+#: src/ai/assistants/page/use-page-toolkit.js:62
+msgid "Generating the %s page…"
+msgstr ""
+
+#. translators: %1$s: page title, %2$s: list of category slugs
+#: src/ai/assistants/page/use-page-toolkit.js:74
+msgid "A new page titled \"%1$s\" has been generated with \"%2$s\" sections."
+msgstr ""
+
+#: src/ai/assistants/page/use-page-toolkit.js:83
+msgid "Save and take me there"
+msgstr ""
+
+#. translators: %s: page title
+#: src/ai/assistants/page/use-page-toolkit.js:108
+msgid "Found the %s page. Taking you there…"
+msgstr ""
+
+#: src/ai/assistants/pattern/tools/add-pattern/use-add-pattern-tool.js:136
+#: src/ai/assistants/pattern/tools/replace-pattern/use-replace-pattern-tool.js:123
+msgid "I'm having trouble finding options for that. Please try a different request."
+msgstr ""
+
+#. Translators: Placeholder represents the category of the section requested by the user.
+#: src/ai/assistants/pattern/tools/add-pattern/use-add-pattern-tool.js:218
+msgid "I have added a new %s section to the page."
+msgstr ""
+
+#: src/ai/assistants/pattern/tools/remove-block/use-remove-block-tool.js:72
+msgid "I have removed the block for you."
+msgstr ""
+
+#. Translators: Placeholder represents the category of the section requested by the user.
+#: src/ai/assistants/pattern/tools/replace-pattern/use-replace-pattern-tool.js:178
+msgid "I have replaced the section with a new %s section."
+msgstr ""
+
+#: src/ai/assistants/pattern/use-pattern-tool-validation.js:26
+msgid "I could not complete your request at this time. Please try again."
+msgstr ""
+
+#: src/ai/assistants/pattern/use-pattern-tool-validation.js:42
+msgid "Please select a block and try again."
+msgstr ""
+
+#. Translators: %s is the name of a pattern category.
+#: src/ai/assistants/pattern/use-pattern-tool-validation.js:68
+msgid "You already have a %s section on this page. Please remove the existing section before adding a new one, or select the existing section and ask to replace it."
+msgstr ""
+
+#: src/ai/assistants/pattern/use-pattern-tool-validation.js:102
+msgid "I notice there is no location set for this site. What would you like the site location to be?"
+msgstr ""
+
+#: src/ai/assistants/pattern/use-pattern-tool-validation.js:138
+msgid "I'm sorry, but I cannot remove that block."
+msgstr ""
+
+#. Translators: Placeholder represents the category of the section requested by the user.
+#: src/ai/assistants/pattern/use-pattern-tool-validation.js:159
+msgid "It looks like there is no %s section on this page. Would you like to add one?"
+msgstr ""
+
+#: src/ai/assistants/shared/change-assistant/use-change-assistant-tool.js:141
+msgid "I am sorry, I had trouble processing that request. Please try again."
+msgstr ""
+
+#: src/ai/assistants/shared/start-over/use-tool-functions.js:18
+#: src/ai/assistants/shared/start-over/use-tool-functions.test.js:31
+msgid "Yes"
+msgstr ""
+
+#: src/ai/assistants/shared/start-over/use-tool-functions.js:19
+#: src/ai/assistants/shared/start-over/use-tool-functions.test.js:32
+msgid "Permanently reset my site"
+msgstr ""
+
+#: src/ai/assistants/shared/start-over/use-tool-functions.js:24
+#: src/ai/assistants/shared/start-over/use-tool-functions.test.js:37
+msgid "No"
+msgstr ""
+
+#: src/ai/assistants/shared/start-over/use-tool-functions.js:25
+#: src/ai/assistants/shared/start-over/use-tool-functions.test.js:38
+msgid "I have changed my mind"
+msgstr ""
+
+#: src/ai/assistants/spec/tools/build-site/use-build-site-tool.js:42
+msgid "Designing your site now…"
+msgstr ""
+
+#: src/ai/assistants/spec/tools/confirm-site-specs/site-specs-list/index.js:92
+msgid "Looks good"
+msgstr ""
+
+#. Translators: placeholder is the site title
+#: src/ai/assistants/spec/tools/confirm-site-specs/site-specs-list/index.js:95
+msgid "Build %s"
+msgstr ""
+
+#: src/ai/assistants/spec/tools/confirm-site-specs/site-specs-list/index.js:191
+#: src/ai/assistants/spec/tools/confirm-site-specs/site-specs-list/index.js:209
+msgid "Click to update site title"
+msgstr ""
+
+#: src/ai/assistants/spec/tools/confirm-site-specs/site-specs-list/index.js:237
+#: src/ai/assistants/spec/tools/confirm-site-specs/site-specs-list/index.js:256
+msgid "Click to update description"
+msgstr ""
+
+#: src/ai/assistants/spec/tools/confirm-site-specs/site-specs-list/index.js:287
+#: src/ai/assistants/spec/tools/confirm-site-specs/site-specs-list/index.js:306
+msgid "Click to update location"
+msgstr ""
+
+#: src/ai/assistants/spec/tools/confirm-site-specs/site-specs-list/index.js:323
+msgid "Do the above details look correct?"
+msgstr ""
+
+#: src/ai/tasks/replace-content/section-types/testimonials.js:65
+msgid "Testimonial generated by AI"
+msgstr ""
+
+#. translators: @generatedbyai is a fake account name we use to make it clear that an AI generated testimonial is AI generated.
+#: src/ai/tasks/replace-content/section-types/testimonials.js:71
+msgid "@generatedbyai"
+msgstr ""
+
+#: src/components/chat/actions/index.js:62
+#: src/components/chat/actions/index.js:108
+msgid "Add a new item"
+msgstr ""
+
+#: src/components/chat/actions/index.js:63
+#: src/components/chat/actions/index.js:83
+msgid "to the events"
+msgstr ""
+
+#: src/components/chat/actions/index.js:72
+msgid "Add a new item to the events."
+msgstr ""
+
+#: src/components/chat/actions/index.js:82
+msgid "Add a new row"
+msgstr ""
+
+#: src/components/chat/actions/index.js:89
+msgid "Add a new row to the events."
+msgstr ""
+
+#: src/components/chat/actions/index.js:109
+#: src/components/chat/actions/index.js:129
+msgid "to the menu"
+msgstr ""
+
+#: src/components/chat/actions/index.js:118
+msgid "Add a new item to the menu."
+msgstr ""
+
+#: src/components/chat/actions/index.js:128
+#: src/components/chat/actions/index.js:253
+msgid "Add a new section"
+msgstr ""
+
+#: src/components/chat/actions/index.js:144
+msgid "Add a new section to the menu."
+msgstr ""
+
+#: src/components/chat/actions/index.js:157
+#: src/components/chat/actions/index.js:183
+#: src/components/chat/actions/index.js:209
+msgid "Add a row"
+msgstr ""
+
+#: src/components/chat/actions/index.js:158
+msgid "to the pricing section"
+msgstr ""
+
+#: src/components/chat/actions/index.js:166
+msgid "Add a new row to the pricing section."
+msgstr ""
+
+#: src/components/chat/actions/index.js:184
+msgid "to the services"
+msgstr ""
+
+#: src/components/chat/actions/index.js:192
+msgid "Add a new row to the services."
+msgstr ""
+
+#: src/components/chat/actions/index.js:210
+msgid "to the testimonials"
+msgstr ""
+
+#: src/components/chat/actions/index.js:216
+msgid "Add a new row to the testimonials."
+msgstr ""
+
+#: src/components/chat/actions/index.js:233
+msgid "Add a new member"
+msgstr ""
+
+#: src/components/chat/actions/index.js:234
+#: src/components/chat/actions/index.js:254
+msgid "to the team"
+msgstr ""
+
+#: src/components/chat/actions/index.js:243
+msgid "Add a new member to the team."
+msgstr ""
+
+#: src/components/chat/actions/index.js:260
+msgid "Add a new section to the team."
+msgstr ""
+
+#: src/components/chat/actions/index.js:320
+msgid "Add a page"
+msgstr ""
+
+#: src/components/chat/actions/index.js:321
+msgid "to my website"
+msgstr ""
+
+#: src/components/chat/actions/index.js:324
+msgid "Add a new page to my website."
+msgstr ""
+
+#: src/components/chat/actions/index.js:330
+msgid "Change the colors"
+msgstr ""
+
+#: src/components/chat/actions/index.js:331
+#: src/components/chat/actions/index.js:341
+msgid "of my website"
+msgstr ""
+
+#: src/components/chat/actions/index.js:334
+msgid "Change the colors of my website."
+msgstr ""
+
+#: src/components/chat/actions/index.js:340
+msgid "Change the fonts"
+msgstr ""
+
+#: src/components/chat/actions/index.js:344
+msgid "Change the fonts of my website."
+msgstr ""
+
+#: src/components/chat/actions/index.js:350
+msgid "Change layout"
+msgstr ""
+
+#: src/components/chat/actions/index.js:351
+msgid "try a different layout"
+msgstr ""
+
+#: src/components/chat/actions/index.js:358
+msgid "Change the layout of my website."
+msgstr ""
+
+#: src/components/chat/actions/index.js:378
+msgid "Generate an image"
+msgstr ""
+
+#: src/components/chat/actions/index.js:379
+#: src/components/chat/actions/index.js:408
+msgid "using AI"
+msgstr ""
+
+#: src/components/chat/actions/index.js:382
+msgid "Make a new AI image to replace the one I have selected."
+msgstr ""
+
+#: src/components/chat/actions/index.js:390
+msgid "Find an image"
+msgstr ""
+
+#: src/components/chat/actions/index.js:391
+msgid "from stock"
+msgstr ""
+
+#: src/components/chat/actions/index.js:394
+msgid "Find me a new stock image to replace the one I have selected."
+msgstr ""
+
+#: src/components/chat/actions/index.js:407
+msgid "Make a logo"
+msgstr ""
+
+#: src/components/chat/actions/index.js:411
+msgid "Make a new logo to replace the one I have selected."
+msgstr ""
+
+#: src/components/chat/actions/index.js:424
+msgid "Change tone"
+msgstr ""
+
+#: src/components/chat/actions/index.js:425
+msgid "to something different"
+msgstr ""
+
+#: src/components/chat/actions/index.js:428
+msgid "Change the tone of the text I have selected."
+msgstr ""
+
+#: src/components/chat/actions/index.js:436
+msgid "Fix spelling and grammar"
+msgstr ""
+
+#: src/components/chat/actions/index.js:437
+#: src/components/chat/actions/index.js:449
+msgid "of this text"
+msgstr ""
+
+#: src/components/chat/actions/index.js:440
+msgid "Fix the spelling and grammar of the text I have selected."
+msgstr ""
+
+#: src/components/chat/actions/index.js:448
+msgid "Reduce length"
+msgstr ""
+
+#: src/components/chat/actions/index.js:452
+msgid "Make the text I have selected, shorter."
+msgstr ""
+
+#: src/components/chat/actions/index.js:465
+msgid "Update link"
+msgstr ""
+
+#: src/components/chat/actions/index.js:466
+msgid "to something else"
+msgstr ""
+
+#: src/components/chat/actions/index.js:469
+msgid "Update the button link to something else."
+msgstr ""
+
+#. Translators: Placeholder is a number representing the maximum number of characters allowed in a message.
+#: src/components/chat/input/index.js:172
+msgid "Your message is too long %1$s/%2$s"
+msgstr ""
+
+#: src/components/chat/input/index.js:287
+#: src/components/dock/button-bar/handoff/index.js:204
+#: src/components/dock/button-bar/handoff/index.js:249
+#: src/components/dock/button-bar/handoff/index.js:341
+#: src/components/dock/button-bar/handoff/index.js:429
+#: src/components/dock/button-bar/handoff/step.js:24
+msgid "Continue"
+msgstr ""
+
+#: src/components/chat/input/index.js:297
+msgid "Try something different"
+msgstr ""
+
+#: src/components/chat/input/index.js:319
+msgid "Chat Input"
+msgstr ""
+
+#: src/components/chat/thread/index.js:128
+msgid "Whoops! Our AI is having some issues right now. Please try again later."
+msgstr ""
+
+#. translators: %s is a reference for debugging, support is an inline link "contact support" to the support page
+#: src/components/chat/thread/index.js:135
+msgid "Something went wrong. Please try again or <support></support> with reference: %s"
+msgstr ""
+
+#: src/components/chat/thread/index.js:148
+msgid "contact support"
+msgstr ""
+
+#: src/components/dock/button-bar/completed-action.js:311
+msgid "Create"
+msgstr ""
+
+#: src/components/dock/button-bar/completed-action.js:316
+msgid "Save"
+msgstr ""
+
+#: src/components/dock/button-bar/completed-action.js:318
+msgid "Done"
+msgstr ""
+
+#: src/components/dock/button-bar/completed-action.js:336
+msgid "Are you sure you want to delete this page?"
+msgstr ""
+
+#: src/components/dock/button-bar/completed-action.js:340
+#: src/components/dock/button-bar/completed-action.js:350
+#: src/components/dock/button-bar/handoff/step.js:28
+msgid "Cancel"
+msgstr ""
+
+#: src/components/dock/button-bar/completed-action.js:341
+msgid "Delete"
+msgstr ""
+
+#: src/components/dock/button-bar/completed-action.js:342
+msgid "Delete Page?"
+msgstr ""
+
+#: src/components/dock/button-bar/completed-action.js:358
+msgid "Undo"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:82
+msgid "Welcome to the editor! Click around to edit your layout, images, or copy. You can also give me commands."
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:90
+msgid "How do I edit text?"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:94
+msgid "How do I change images?"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:198
+msgid "Welcome!"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:199
+msgid "Pick your color palette, font pairing, and layout in three quick steps. Edit details after in the Editor."
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:214
+msgid "Do this later"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:233
+msgid "Pick your colors"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:234
+msgid "Select from our AI-recommended color palettes to complement your site's design."
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:259
+msgid "Ask AI for new color palettes"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:288
+#: src/components/dock/button-bar/handoff/index.js:377
+msgid "Ask AI"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:293
+msgid "Give me a little more information on the type of colors you want, or I can suggest colors for you."
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:297
+msgid "\"Show me modern colors\""
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:326
+msgid "Pick your font pair"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:327
+msgid "Select from these curated fonts pairing."
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:348
+msgid "Ask AI to combine more font pairings"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:382
+msgid "Give me a little more information on the type of fonts you'd like. I can also suggest some fonts for you."
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:386
+msgid "\"Show me modern fonts\""
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:415
+msgid "Pick a layout"
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/index.js:416
+msgid "Finally, pick from these layouts to organize your content and enhance user experience."
+msgstr ""
+
+#: src/components/dock/button-bar/handoff/step.js:73
+msgid "Skip"
+msgstr ""
+
+#: src/components/dock/cancel-action-button.js:9
+msgid "Stop the current action."
+msgstr ""
+
+#: src/components/dock/menus/button.js:9
+msgid "Update"
+msgstr ""
+
+#: src/components/dock/menus/cover-image.js:12
+msgid "Background Image"
+msgstr ""
+
+#: src/components/dock/menus/cover-image.js:26
+msgid "Background image"
+msgstr ""
+
+#: src/components/dock/menus/cover-image.js:31
+msgid "Cover image"
+msgstr ""
+
+#: src/components/dock/menus/group.js:22
+msgid "Add Pattern"
+msgstr ""
+
+#: src/components/dock/menus/group.js:24
+msgid "Describe the pattern to add"
+msgstr ""
+
+#: src/components/dock/menus/group.js:44
+msgid "What kind of pattern would you like to add to your page?"
+msgstr ""
+
+#: src/components/dock/menus/group.js:79
+msgid "About Section"
+msgstr ""
+
+#: src/components/dock/menus/group.js:80
+msgid "A section about my site"
+msgstr ""
+
+#: src/components/dock/menus/group.js:81
+msgid "Insert a section all about my site"
+msgstr ""
+
+#: src/components/dock/menus/group.js:89
+#: src/data/page-definitions.js:10
+msgid "Contact"
+msgstr ""
+
+#: src/components/dock/menus/group.js:90
+msgid "A contact section"
+msgstr ""
+
+#: src/components/dock/menus/group.js:91
+msgid "Insert a section with contact information"
+msgstr ""
+
+#: src/components/dock/menus/group.js:99
+msgid "Events List"
+msgstr ""
+
+#: src/components/dock/menus/group.js:100
+msgid "A list of upcoming events"
+msgstr ""
+
+#: src/components/dock/menus/group.js:104
+msgid "Insert a section with a list of upcoming events"
+msgstr ""
+
+#: src/components/dock/menus/group.js:112
+msgid "Image Gallery"
+msgstr ""
+
+#: src/components/dock/menus/group.js:113
+msgid "A gallery of images"
+msgstr ""
+
+#: src/components/dock/menus/group.js:114
+msgid "Insert a section with a gallery of images"
+msgstr ""
+
+#: src/components/dock/menus/group.js:122
+msgid "Intro Section"
+msgstr ""
+
+#: src/components/dock/menus/group.js:123
+msgid "A section introducing my site"
+msgstr ""
+
+#: src/components/dock/menus/group.js:127
+msgid "Insert a section introducing my site"
+msgstr ""
+
+#: src/components/dock/menus/group.js:135
+#: src/data/page-definitions.js:11
+msgid "Menu"
+msgstr ""
+
+#: src/components/dock/menus/group.js:136
+msgid "A food menu"
+msgstr ""
+
+#: src/components/dock/menus/group.js:137
+msgid "Insert a section for my food menu"
+msgstr ""
+
+#: src/components/dock/menus/group.js:145
+msgid "Newsletter"
+msgstr ""
+
+#: src/components/dock/menus/group.js:146
+msgid "A newsletter subscribe form"
+msgstr ""
+
+#: src/components/dock/menus/group.js:150
+msgid "Insert a section with a newsletter subscribe form"
+msgstr ""
+
+#: src/components/dock/menus/group.js:158
+msgid "Posts List"
+msgstr ""
+
+#: src/components/dock/menus/group.js:159
+msgid "A list of my posts"
+msgstr ""
+
+#: src/components/dock/menus/group.js:160
+msgid "Insert a section with a list of my posts"
+msgstr ""
+
+#: src/components/dock/menus/group.js:168
+msgid "Pricing Table"
+msgstr ""
+
+#: src/components/dock/menus/group.js:169
+msgid "A pricing table for my services"
+msgstr ""
+
+#: src/components/dock/menus/group.js:173
+msgid "Insert a section with a pricing table for my services"
+msgstr ""
+
+#: src/components/dock/menus/group.js:181
+msgid "Services List"
+msgstr ""
+
+#: src/components/dock/menus/group.js:182
+msgid "A list of my services"
+msgstr ""
+
+#: src/components/dock/menus/group.js:183
+msgid "Insert a section with a list of my services"
+msgstr ""
+
+#: src/components/dock/menus/group.js:191
+msgid "Testimonials"
+msgstr ""
+
+#: src/components/dock/menus/group.js:192
+msgid "A list of testimonials"
+msgstr ""
+
+#: src/components/dock/menus/group.js:193
+msgid "Insert a section with some testimonials"
+msgstr ""
+
+#: src/components/dock/menus/group.js:201
+msgid "Team"
+msgstr ""
+
+#: src/components/dock/menus/group.js:202
+msgid "A list of team members"
+msgstr ""
+
+#: src/components/dock/menus/group.js:203
+msgid "Insert a section with a list of team members"
+msgstr ""
+
+#. translators: %s is the pattern category name
+#: src/components/dock/menus/group.js:217
+msgid "A %s section"
+msgstr ""
+
+#: src/components/dock/menus/images.js:9
+msgid "Regenerate"
+msgstr ""
+
+#: src/components/dock/menus/navigation-item.js:20
+msgid "Edit page"
+msgstr ""
+
+#: src/components/dock/menus/navigation.js:19
+msgid "Add Page"
+msgstr ""
+
+#: src/components/dock/menus/navigation.js:20
+msgid "Describe the page to add"
+msgstr ""
+
+#: src/components/dock/menus/navigation.js:34
+msgid "What kind of page would you like to add?"
+msgstr ""
+
+#: src/components/dock/menus/navigation.js:40
+msgid "A contact page"
+msgstr ""
+
+#: src/components/dock/menus/navigation.js:41
+msgid "A blog page"
+msgstr ""
+
+#: src/components/dock/menus/section-color-variation-picker/index.js:158
+msgid "Pattern styles"
+msgstr ""
+
+#: src/components/dock/menus/text.js:9
+msgid "Rewrite"
+msgstr ""
+
+#: src/components/dock/utils.js:34
+#: src/components/dock/utils.js:42
+msgid "Replacing content…"
+msgstr ""
+
+#: src/components/dock/utils.js:38
+msgid "Regenerating text…"
+msgstr ""
+
+#: src/components/dock/utils.js:40
+msgid "Regenerating image…"
+msgstr ""
+
+#: src/components/dock/utils.js:50
+msgid "Generating contact form…"
+msgstr ""
+
+#: src/components/dock/utils.js:57
+msgid "Removing pattern…"
+msgstr ""
+
+#: src/components/dock/utils.js:59
+msgid "Removing block…"
+msgstr ""
+
+#: src/components/dock/utils.js:61
+msgid "Adding pattern…"
+msgstr ""
+
+#: src/components/dock/utils.js:63
+msgid "Replacing pattern…"
+msgstr ""
+
+#: src/components/dock/utils.js:65
+msgid "Generating pattern…"
+msgstr ""
+
+#: src/components/dock/utils.js:67
+msgid "Generating image…"
+msgstr ""
+
+#: src/components/dock/utils.js:69
+msgid "Getting stock image…"
+msgstr ""
+
+#: src/components/dock/utils.js:73
+msgid "Updating site logo…"
+msgstr ""
+
+#: src/components/dock/utils.js:75
+msgid "Generating site logo…"
+msgstr ""
+
+#: src/components/dock/utils.js:77
+msgid "Working on your request…"
+msgstr ""
+
+#: src/components/dock/utils.js:85
+msgid "How can I help you?"
+msgstr ""
+
+#: src/components/dock/utils.js:86
+msgid "Type what you'd like to do"
+msgstr ""
+
+#: src/components/dock/utils.js:89
+msgid "What sort of website do you need?"
+msgstr ""
+
+#: src/components/dock/utils.js:90
+msgid "Describe your site"
+msgstr ""
+
+#: src/components/index.js:234
+msgid "If you go back, your current progress may be lost. From there, you can start fresh and create a new site."
+msgstr ""
+
+#: src/components/index.js:238
+msgid "Continue editing"
+msgstr ""
+
+#: src/components/index.js:239
+msgid "Build a new site"
+msgstr ""
+
+#: src/components/index.js:240
+msgid "Start Over?"
+msgstr ""
+
+#: src/components/onboarding/chat-view.js:71
+msgid "Send a message"
+msgstr ""
+
+#: src/components/onboarding/landing-view.js:96
+msgid "Make a website as unique as you."
+msgstr ""
+
+#: src/components/onboarding/landing-view.js:104
+msgid "What do you want to build?"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:32
+#: src/components/onboarding/site-suggestions.js:76
+msgid "Build a website"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:33
+msgid "for my bakery"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:36
+msgid "Design a portfolio"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:37
+msgid "for showcasing my work"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:40
+msgid "Make a landing page"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:41
+msgid "for my new book"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:44
+msgid "Create a portfolio"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:45
+msgid "for my handmade jewelry"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:48
+msgid "Build a blog"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:49
+msgid "for my travel adventures"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:52
+#: src/components/onboarding/site-suggestions.js:72
+msgid "Design a website"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:53
+msgid "for my restaurant"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:56
+msgid "Design a landing page"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:57
+msgid "for my photography"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:60
+msgid "Make a website"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:61
+msgid "for my yoga studio"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:64
+msgid "Build an online presence"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:65
+msgid "for my business"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:68
+msgid "Create a site"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:69
+msgid "for my podcast"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:73
+msgid "for my fitness coaching"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:77
+msgid "for my coffee shop"
+msgstr ""
+
+#: src/components/onboarding/site-suggestions.js:204
+msgid "Refresh"
+msgstr ""
+
+#. translators: %1$s: variation title. %2$s variation description.
+#: src/components/style-variations-container.js:95
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#: src/components/style-variations-container.js:142
+msgid "Default"
+msgstr ""
+
+#: src/components/variation-picker/index.js:126
+msgid "There was a problem retrieving options. Please try again."
+msgstr ""
+
+#: src/components/variation-picker/index.js:153
+msgid "Previous options"
+msgstr ""
+
+#: src/components/variation-picker/index.js:165
+msgid "Next options"
+msgstr ""
+
+#: src/data/page-definitions.js:9
+msgid "About"
+msgstr ""
+
+#: src/hooks/use-handle-reset.js:21
+msgid "We couldn't complete that request. Please try again."
+msgstr ""
+
+#. Translators: Placeholder represents the description of the image requested by the user.
+#: src/hooks/use-images.js:250
+msgid "I have generated a new logo of: %s"
+msgstr ""
+
+#: src/hooks/use-images.js:296
+#: src/hooks/use-images.js:510
+msgid "I cannot generate an image for the currently selected block."
+msgstr ""
+
+#: src/hooks/use-images.js:303
+msgid "I am unable to perform your request."
+msgstr ""
+
+#: src/hooks/use-images.js:520
+msgid "I could not retrieve a new stock image. Please try again."
+msgstr ""
+
+#. Translators: Placeholder represents the topic of the image requested by the user.
+#: src/hooks/use-images.js:533
+msgid "I have inserted a new stock image of: %s"
+msgstr ""
+
+#: src/hooks/use-pages.js:135
+#: src/hooks/use-pages.js:194
+msgid "No title"
+msgstr ""
+
+#: src/hooks/use-patterns.js:985
+msgid "Learn more"
+msgstr ""
+
+#: src/hooks/use-patterns.js:994
+msgid "View Menu"
+msgstr ""
+
+#: src/hooks/use-patterns.js:1003
+msgid "Find out more"
+msgstr ""
+
+#: src/hooks/use-patterns.js:1009
+msgid "Upcoming Events"
+msgstr ""
+
+#: src/hooks/use-patterns.js:1018
+msgid "Our Services"
+msgstr ""
+
+#: src/hooks/use-patterns.js:1024
+msgid "Pricing"
+msgstr ""
+
+#: src/hooks/use-patterns.js:1029
+msgid "Read more"
+msgstr ""
+
+#: src/hooks/use-patterns.js:1218
+msgid "Generated Pattern"
+msgstr ""
+
+#: src/hooks/use-reset-site.js:78
+msgid "Here are your current site specifications. Would you like to modify them or start over?"
+msgstr ""
+
+#: src/utils/constants.js:35
+msgid "Type another request …"
+msgstr ""
+
+#: src/utils/fonts.js:11
+msgid "There are no fonts available."
+msgstr ""
+
+#: src/utils/fonts.js:43
+msgid "Here are your matching fonts."
+msgstr ""
+
+#: src/utils/fonts.js:44
+msgid "I didn't find any fonts that match, but here are all available fonts."
+msgstr ""

@@ -1,0 +1,128 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress.com - Big Sky\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-02-03T22:53:47+00:00\n"
+"PO-Revision-Date: 2025-01-28 22:54:04+0000\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+
+#: big-sky.php:417
+msgid "These checks passed:"
+msgstr "نجحت عمليات التحقق هذه:"
+
+#: big-sky.php:403
+msgid "Big Sky detected the following issues with your site:"
+msgstr "اكتشف Big Sky المشكلات الآتية في موقعك:"
+
+#. translators: $d is the number of performance issues found.
+#: big-sky.php:402
+msgid "Big Sky is affected by %d issue"
+msgid_plural "Big Sky is affected by %d issues"
+msgstr[0] "تأثر Big Sky بـ %d من المشكلات"
+msgstr[1] "تأثر Big Sky بـ %d من المشكلات"
+msgstr[2] "تأثر Big Sky بـ %d من المشكلات"
+msgstr[3] "تأثر Big Sky بـ %d من المشكلات"
+msgstr[4] "تأثر Big Sky بـ %d من المشكلات"
+msgstr[5] "تأثر Big Sky بـ %d من المشكلات"
+
+#: big-sky.php:392
+msgid "The home page is set to a static page."
+msgstr "تم تعيين الصفحة الرئيسية على صفحة ثابتة."
+
+#: big-sky.php:386
+msgid "The home page is not set to a static page. Big Sky requires a static page to be set as the home page."
+msgstr "لم يتم تعيين الصفحة الرئيسية على صفحة ثابتة. يتطلب Big Sky تعيين الصفحة الثابتة بوصفها الصفحة الرئيسية."
+
+#: big-sky.php:382
+msgid "Change it."
+msgstr "قم بتغييره."
+
+#: big-sky.php:372
+msgid "Mapbox API key is set."
+msgstr "تم تعيين مفتاح واجهة برمجة تطبيقات Mapbox."
+
+#: big-sky.php:367
+msgid "Mapbox API key is not set. Big Sky requires a Mapbox API key to be set."
+msgstr "لم يتم تعيين مفتاح واجهة برمجة تطبيقات Mapbox. يتطلب Big Sky تعيين مفتاح واجهة برمجة تطبيقات Mapbox."
+
+#: big-sky.php:359
+msgid "Jetpack is connected to an admin."
+msgstr "تم توصيل Jetpack بمسؤول"
+
+#: big-sky.php:354
+msgid "Jetpack does not have a connected admin. Big Sky requires Jetpack to be connected to an admin."
+msgstr "ليس لدى Jetpack مسؤول متصل. يتطلب Big Sky ربط Jetpack بمسؤول"
+
+#: big-sky.php:345
+msgid "Jetpack is connected."
+msgstr "Jetpack متصل."
+
+#: big-sky.php:340
+msgid "Jetpack is not connected. Big Sky requires Jetpack to be connected."
+msgstr "Jetpack غير متصل. يتطلب Big Sky اتصال Jetpack."
+
+#: big-sky.php:331
+msgid "Jetpack is installed."
+msgstr "تم تثبيت Jetpack."
+
+#: big-sky.php:326
+msgid "Jetpack is not installed. Big Sky requires Jetpack to be installed and active."
+msgstr "لم يتم تثبيت Jetpack. يتطلب Big Sky تثبيت Jetpack وأن يكون نشطًا."
+
+#: big-sky.php:317
+msgid "The Assembler theme is active."
+msgstr "قالب Assembler نشط."
+
+#: big-sky.php:312
+msgid "The Assembler theme is not active. Big Sky requires the Assembler theme to be active."
+msgstr "قالب Assembler غير نشط. يتطلب Big Sky أن يكون قالب Assembler نشطًا."
+
+#: big-sky.php:301
+msgid "Big Sky did not find any known issues with your site."
+msgstr "لم يعثر Big Sky على أي مشكلات معروفة في موقعك."
+
+#: big-sky.php:293
+msgid "Big Sky Checks"
+msgstr "عمليات تحقق Big Sky"
+
+#: big-sky.php:268
+#: big-sky.php:269
+msgid "Big Sky checks"
+msgstr "عمليات تحقق Big Sky"
+
+#: big-sky.php:157
+msgid "AI Features"
+msgstr "ميزات الذكاء الاصطناعي"
+
+#: big-sky.php:149
+msgid "Enable AI-powered site building experience"
+msgstr "تمكين تجربة إنشاء موقع مدعوم من الذكاء الاصطناعي"
+
+#. Author of the plugin
+#: big-sky.php
+msgid "Automattic, Inc."
+msgstr "Automattic, Inc."
+
+#. Description of the plugin
+#: big-sky.php
+msgid "The Big Sky AI Site Builder."
+msgstr "منشئ موقع بالذكاء الاصطناعي في Big Sky."
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: big-sky.php
+msgid "https://automattic.com/"
+msgstr "https://automattic.com/"
+
+#. Plugin Name of the plugin
+#: big-sky.php
+#: big-sky.php:296
+msgid "Big Sky"
+msgstr "Big Sky"
