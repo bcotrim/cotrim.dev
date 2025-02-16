@@ -1,0 +1,57 @@
+# Cache files
+/cache/*
+!/cache/.htaccess
+
+# Upgrade files
+/upgrade/
+
+# Uploads directory
+/uploads/
+
+# Debug logs
+/debug.log
+
+# Local configuration files
+*.log
+*.sql
+*.sqlite
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# WordPress.com specific
+/languages/
+/mu-plugins/
+/wp-cache-config.php
+
+# Database files
+/database/
+/db.php
+
+# Sensitive or environment-specific files
+.env
+.htaccess
+wp-config.php
+
+# Plugin specific files that shouldn't be in version control
+/plugins/*/node_modules/
+/plugins/*/vendor/
+/plugins/*/composer.lock
+/plugins/*/package-lock.json
+
+# Theme specific files that shouldn't be in version control
+/themes/*/node_modules/
+/themes/*/vendor/
+/themes/*/composer.lock
+/themes/*/package-lock.json
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db 
