@@ -1,0 +1,143 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--70)">
+
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+    <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+
+        <!-- wp:heading {"level":1,"className":"terminal-prompt terminal-cursor","style":{"typography":{"fontSize":"2rem"}}} -->
+        <h1 class="wp-block-heading terminal-prompt terminal-cursor">Welcome to cotrim.dev</h1>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|terminal-white"}}} -->
+        <p class="has-text-color" style="color:var(--wp--preset--color--terminal-white)">System initialized. Loading personal blog interface...</p>
+        <!-- /wp:paragraph -->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:separator {"style":{"color":{"background":"var:preset|color|terminal-gray"}}} -->
+    <hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background" style="background-color:var(--wp--preset--color--terminal-gray);color:var(--wp--preset--color--terminal-gray)"/>
+    <!-- /wp:separator -->
+
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+    <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+
+        <!-- wp:heading {"level":2} -->
+        <h2 class="wp-block-heading">whoami</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
+        <div class="wp-block-buttons">
+            <!-- wp:button -->
+            <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/bcotrim" target="_blank" rel="noopener">[GitHub]</a></div>
+            <!-- /wp:button -->
+
+            <!-- wp:button {"backgroundColor":"terminal-amber","textColor":"terminal-black"} -->
+            <div class="wp-block-button"><a class="wp-block-button__link has-terminal-black-color has-terminal-amber-background-color has-text-color has-background wp-element-button" href="https://linkedin.com/in/bcotrim" target="_blank" rel="noopener">[LinkedIn]</a></div>
+            <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:separator {"style":{"color":{"background":"var:preset|color|terminal-gray"}}} -->
+    <hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background" style="background-color:var(--wp--preset--color--terminal-gray);color:var(--wp--preset--color--terminal-gray)"/>
+    <!-- /wp:separator -->
+
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+    <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+
+        <!-- wp:heading {"level":2} -->
+        <h2 class="wp-block-heading">cat blog</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|terminal-gray"}}} -->
+        <p class="has-text-color" style="color:var(--wp--preset--color--terminal-gray)">Recent posts from the terminal...</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
+        <div class="wp-block-query">
+
+            <!-- wp:post-template {"layout":{"type":"default"}} -->
+
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"bottom":"var:preset|spacing|50"}},"border":{"width":"1px","color":"var:preset|color|terminal-gray"}},"backgroundColor":"terminal-black","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group has-border-color has-terminal-black-background-color has-background" style="border-color:var(--wp--preset--color--terminal-gray);border-width:1px;margin-bottom:var(--wp--preset--spacing--50);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+
+                    <!-- wp:post-title {"isLink":true,"style":{"color":{"text":"var:preset|color|terminal-amber"}}} /-->
+
+                    <!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--30)">
+                        <!-- wp:post-date {"style":{"color":{"text":"var:preset|color|terminal-gray"}}} /-->
+                    </div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:post-excerpt {"moreText":"Read more →","excerptLength":30} /-->
+
+                </div>
+                <!-- /wp:group -->
+
+            <!-- /wp:post-template -->
+
+            <!-- wp:query-no-results -->
+                <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|terminal-gray"}}} -->
+                <p class="has-text-color" style="color:var(--wp--preset--color--terminal-gray)">No posts found. Start writing your first blog post!</p>
+                <!-- /wp:paragraph -->
+            <!-- /wp:query-no-results -->
+
+            <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+                <!-- wp:query-pagination-previous /-->
+                <!-- wp:query-pagination-numbers /-->
+                <!-- wp:query-pagination-next /-->
+            <!-- /wp:query-pagination -->
+
+        </div>
+        <!-- /wp:query -->
+
+        <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}}} -->
+        <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--60)">
+            <!-- wp:button -->
+            <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/blog">[View All Posts]</a></div>
+            <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:separator {"style":{"color":{"background":"var:preset|color|terminal-gray"}}} -->
+    <hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background" style="background-color:var(--wp--preset--color--terminal-gray);color:var(--wp--preset--color--terminal-gray)"/>
+    <!-- /wp:separator -->
+
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+    <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+
+        <!-- wp:heading {"level":2} -->
+        <h2 class="wp-block-heading">ls projects</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|terminal-gray"}}} -->
+        <p class="has-text-color" style="color:var(--wp--preset--color--terminal-gray)">Coming soon... Projects directory is currently empty.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>This section will showcase personal projects, experiments, and contributions. Check back later for updates.</p>
+        <!-- /wp:paragraph -->
+
+    </div>
+    <!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->

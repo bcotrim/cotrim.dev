@@ -1,0 +1,35 @@
+/**
+ * Terminal Effects CSS
+ * Retro terminal/DOS aesthetic styling
+ * All styles scoped to .cotrimdev-retro-theme to avoid affecting wp-admin
+ */
+
+/* Base terminal styling */
+html {
+    height: 100%;
+}
+
+.cotrimdev-retro-theme {
+    position: relative;
+    background-color: #0c0c0c;
+    color: #00ff41;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* WordPress site blocks wrapper */
+.cotrimdev-retro-theme .wp-site-blocks {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content grows to fill space */
+.cotrimdev-retro-theme .wp-site-blocks > main {
+    flex: 1;
+}
+
+/* Wrap all theme styles in .cotrimdev-retro-theme scope */
+.cotrimdev-retro-theme {
+

@@ -1,0 +1,385 @@
+/**
+ * Terminal Effects CSS
+ * Retro terminal/DOS aesthetic styling
+ */
+
+
+/* Base terminal styling - only apply to front-end */
+body:not(.wp-admin) html {
+    height: 100%;
+}
+
+body:not(.wp-admin) {
+    position: relative;
+    background-color: #0c0c0c;
+    color: #00ff41;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* WordPress site blocks wrapper */
+body:not(.wp-admin) .wp-site-blocks {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content grows to fill space */
+body:not(.wp-admin) .wp-site-blocks > main {
+    flex: 1;
+}
+
+/* Subtle scanline effect overlay - front-end only */
+body:not(.wp-admin)::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+}
+
+/* Terminal prompt styling */
+.terminal-prompt {
+    color: #00ff41;
+    font-weight: 700;
+}
+
+.terminal-prompt::before {
+    content: '$ ';
+    color: #ffb000;
+}
+
+/* Site title styling - header terminal prompt */
+.wp-block-site-title {
+    text-transform: none !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+}
+
+.wp-block-site-title a {
+    color: #ffb000 !important;
+    text-decoration: none !important;
+}
+
+.wp-block-site-title a:hover {
+    color: #00ff41 !important;
+}
+
+/* Header terminal prompt - remove spacing and match colors */
+.wp-block-group .wp-block-group .wp-block-group {
+    gap: 0 !important;
+}
+
+.wp-block-group .wp-block-group .wp-block-group p,
+.wp-block-group .wp-block-group .wp-block-group .wp-block-site-title,
+.wp-block-group .wp-block-group .wp-block-group .wp-block-site-title a {
+    margin: 0 !important;
+    color: #ffb000 !important;
+}
+
+/* Footer links - match header navigation color */
+footer a,
+.wp-block-template-part a {
+    color: #00ff41 !important;
+}
+
+footer a:hover,
+.wp-block-template-part a:hover {
+    color: #ffb000 !important;
+}
+
+/* Section headers with command-line style */
+h2.wp-block-heading::before {
+    content: '$ ';
+    color: #ffb000;
+    font-weight: 700;
+}
+
+/* Link styling with brackets */
+a:not(.wp-element-button) {
+    position: relative;
+    color: #00ffff;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+a:not(.wp-element-button):hover {
+    color: #ffb000;
+    text-decoration: none;
+}
+
+/* Terminal cursor effect for specific elements */
+.terminal-cursor::after {
+    content: '▊';
+    color: #00ff41;
+    animation: cursor-blink 1s infinite;
+    margin-left: 2px;
+}
+
+@keyframes cursor-blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Code blocks - terminal style */
+pre,
+code {
+    background-color: #0a0a0a !important;
+    border: 1px solid #666666 !important;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+code {
+    color: #ffb000 !important;
+    padding: 2px 6px;
+}
+
+pre {
+    padding: 1rem !important;
+    overflow-x: auto;
+}
+
+/* Terminal box styling */
+.terminal-box {
+    background-color: #0a0a0a;
+    border: 1px solid #666666;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.terminal-box::before {
+    content: attr(data-title);
+    display: block;
+    color: #ffb000;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #666666;
+    padding-bottom: 0.5rem;
+}
+
+/* Post meta styling */
+.wp-block-post-date,
+.wp-block-post-author {
+    color: #666666;
+    font-size: 0.875rem;
+}
+
+.wp-block-post-date::before {
+    content: '[';
+    color: #666666;
+}
+
+.wp-block-post-date::after {
+    content: ']';
+    color: #666666;
+}
+
+/* Button styling - terminal style */
+.wp-element-button,
+.wp-block-button__link {
+    background-color: #00ff41 !important;
+    color: #0a0a0a !important;
+    border: 2px solid #00ff41 !important;
+    border-radius: 0 !important;
+    padding: 0.75rem 1.5rem !important;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.wp-element-button:hover,
+.wp-block-button__link:hover {
+    background-color: #0a0a0a !important;
+    color: #00ff41 !important;
+}
+
+/* Navigation menu styling */
+.wp-block-navigation-item a {
+    color: #e0e0e0;
+    text-decoration: none;
+    position: relative;
+}
+
+.wp-block-navigation-item a::before {
+    content: '> ';
+    color: #666666;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.wp-block-navigation-item a:hover::before,
+.wp-block-navigation-item.current-menu-item a::before {
+    opacity: 1;
+}
+
+.wp-block-navigation-item a:hover {
+    color: #00ff41;
+}
+
+.wp-block-navigation-item.current-menu-item a {
+    color: #ffb000;
+}
+
+/* Mobile navigation overlay - minimal fixes */
+.wp-block-navigation__responsive-container.is-menu-open {
+    background-color: #0c0c0c !important;
+}
+
+.wp-block-navigation__responsive-close {
+    color: #00ff41 !important;
+    padding: 1rem !important;
+}
+
+/* Desktop navigation - right align only on larger screens */
+@media (min-width: 601px) {
+    .wp-block-navigation {
+        justify-content: flex-end !important;
+    }
+}
+
+/* Lists - terminal style */
+ul, ol {
+    list-style-position: outside;
+    padding-left: 2rem;
+}
+
+ul li::marker {
+    content: '> ';
+    color: #ffb000;
+}
+
+ol li::marker {
+    color: #ffb000;
+}
+
+/* Separator/divider */
+hr,
+.wp-block-separator {
+    border: none;
+    border-top: 1px solid #666666;
+    margin: 2rem 0;
+}
+
+/* Quote blocks */
+blockquote,
+.wp-block-quote {
+    border-left: 3px solid #ffb000;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: #e0e0e0;
+    font-style: italic;
+}
+
+blockquote::before {
+    content: '> ';
+    color: #666666;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #666666;
+}
+
+th, td {
+    border: 1px solid #666666;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #0a0a0a;
+    color: #ffb000;
+    font-weight: 700;
+}
+
+/* Selection styling */
+::selection {
+    background-color: #00ff41;
+    color: #0a0a0a;
+}
+
+::-moz-selection {
+    background-color: #00ff41;
+    color: #0a0a0a;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666666;
+    border: 2px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00ff41;
+}
+
+/* Focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #00ff41;
+    outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .terminal-box {
+        padding: 1rem;
+    }
+}
+
+/* Print styles - remove terminal effects for printing */
+@media print {
+    body::before {
+        display: none;
+    }
+
+    .terminal-prompt::before,
+    h2.wp-block-heading::before,
+    .wp-block-navigation-item a::before,
+    ul li::marker {
+        content: normal;
+    }
+}
