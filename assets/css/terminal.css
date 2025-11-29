@@ -290,13 +290,18 @@ html {
 }
 
 /* Header terminal prompt - remove spacing and match colors */
-.wp-block-group .wp-block-group .wp-block-group {
+/* Scope to header only to avoid affecting other nested groups */
+header .wp-block-group .wp-block-group .wp-block-group,
+.wp-block-template-part[data-area="header"] .wp-block-group .wp-block-group .wp-block-group {
     gap: 0 !important;
 }
 
-.wp-block-group .wp-block-group .wp-block-group p,
-.wp-block-group .wp-block-group .wp-block-group .wp-block-site-title,
-.wp-block-group .wp-block-group .wp-block-group .wp-block-site-title a {
+header .wp-block-group .wp-block-group .wp-block-group p,
+header .wp-block-group .wp-block-group .wp-block-group .wp-block-site-title,
+header .wp-block-group .wp-block-group .wp-block-group .wp-block-site-title a,
+.wp-block-template-part[data-area="header"] .wp-block-group .wp-block-group .wp-block-group p,
+.wp-block-template-part[data-area="header"] .wp-block-group .wp-block-group .wp-block-group .wp-block-site-title,
+.wp-block-template-part[data-area="header"] .wp-block-group .wp-block-group .wp-block-group .wp-block-site-title a {
     margin: 0 !important;
     color: var(--color-accent) !important;
 }
