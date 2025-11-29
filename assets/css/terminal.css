@@ -144,6 +144,19 @@
     color: #4c4f69 !important;
 }
 
+/* Light mode: Post cards and group blocks with dark backgrounds */
+.cotrimdev-retro-theme.theme-light .has-terminal-black-background-color {
+    background-color: #dce0e8 !important;
+}
+
+.cotrimdev-retro-theme.theme-light .has-terminal-black-background-color p {
+    color: #4c4f69 !important;
+}
+
+.cotrimdev-retro-theme.theme-light .has-terminal-black-background-color .wp-block-post-date {
+    color: #5c5f77 !important;
+}
+
 /* Post title links - match green text color */
 .cotrimdev-retro-theme .wp-block-post-title a {
     color: var(--color-text) !important;
