@@ -11,20 +11,20 @@
     --color-bg-dark: #11111b;
     --color-text: #a6e3a1;
     --color-accent: #fab387;
-    --color-surface: #585b70;
+    --color-surface: #a6adc8;
     --color-text-alt: #cdd6f4;
     --color-link: #89dceb;
     --color-error: #f38ba8;
 }
 
-/* CSS Variables for Catppuccin Latte (Light) */
+/* CSS Variables for Catppuccin Latte (Light) - Darkened for WCAG AA contrast */
 .cotrimdev-retro-theme.theme-light {
     --color-bg: #eff1f5;
     --color-bg-dark: #ccd0da;
-    --color-text: #40a02b;
-    --color-accent: #fe640b;
+    --color-text: #1a7220;
+    --color-accent: #b04005;
     --color-surface: #4c4f69;
-    --color-text-alt: #5c5f77;
+    --color-text-alt: #4c4f69;
     --color-link: #1e66f5;
     --color-error: #d20f39;
 }
@@ -43,18 +43,104 @@
 /* Override terminal-white color for light theme */
 .cotrimdev-retro-theme.theme-light p[style*="terminal-white"],
 .cotrimdev-retro-theme.theme-light .has-terminal-white-color {
-    color: #5c5f77 !important;
+    color: #4c4f69 !important;
 }
 
-/* Override terminal-green color for light theme - make it darker */
+/* Override terminal-green for light theme (darker green for contrast) */
 .cotrimdev-retro-theme.theme-light p[style*="terminal-green"],
-.cotrimdev-retro-theme.theme-light .has-terminal-green-color {
-    color: #40a02b !important;
+.cotrimdev-retro-theme.theme-light .has-terminal-green-color,
+.cotrimdev-retro-theme.theme-light [style*="terminal-green"] {
+    color: #1a7220 !important;
 }
 
-/* Specifically target small footer text for better readability */
-.cotrimdev-retro-theme.theme-light footer p[style*="font-size:0.75rem"],
-.cotrimdev-retro-theme.theme-light .wp-block-template-part[data-area="footer"] p[style*="font-size:0.75rem"] {
+/* Override terminal-amber/peach for light theme (darker orange for contrast) */
+.cotrimdev-retro-theme.theme-light p[style*="terminal-amber"],
+.cotrimdev-retro-theme.theme-light .has-terminal-amber-color,
+.cotrimdev-retro-theme.theme-light [style*="terminal-amber"] {
+    color: #b04005 !important;
+}
+
+/* Override terminal-gray for light theme */
+.cotrimdev-retro-theme.theme-light p[style*="terminal-gray"],
+.cotrimdev-retro-theme.theme-light .has-terminal-gray-color,
+.cotrimdev-retro-theme.theme-light [style*="terminal-gray"] {
+    color: #4c4f69 !important;
+}
+
+/* Header prompt text overrides for light theme */
+.cotrimdev-retro-theme.theme-light .wp-block-site-title a {
+    color: #b04005 !important;
+}
+
+/* Navigation links in light theme */
+.cotrimdev-retro-theme.theme-light .wp-block-navigation-item a {
+    color: #1a7220 !important;
+}
+
+.cotrimdev-retro-theme.theme-light .wp-block-navigation-item a:hover {
+    color: #b04005 !important;
+}
+
+/* Footer links in light theme */
+.cotrimdev-retro-theme.theme-light footer a,
+.cotrimdev-retro-theme.theme-light .wp-block-template-part a {
+    color: #1a7220 !important;
+}
+
+.cotrimdev-retro-theme.theme-light footer a:hover,
+.cotrimdev-retro-theme.theme-light .wp-block-template-part a:hover {
+    color: #b04005 !important;
+}
+
+/* Button overrides for light theme */
+.cotrimdev-retro-theme.theme-light .wp-block-button__link,
+.cotrimdev-retro-theme.theme-light .wp-element-button {
+    background-color: #1a7220 !important;
+    color: #eff1f5 !important;
+}
+
+.cotrimdev-retro-theme.theme-light .wp-block-button__link:hover,
+.cotrimdev-retro-theme.theme-light .wp-element-button:hover {
+    background-color: #145a19 !important;
+}
+
+/* Secondary button style (amber background) - match primary in light mode */
+.cotrimdev-retro-theme.theme-light .has-terminal-amber-background-color {
+    background-color: #1a7220 !important;
+    color: #eff1f5 !important;
+}
+
+.cotrimdev-retro-theme.theme-light .has-terminal-amber-background-color:hover {
+    background-color: #145a19 !important;
+}
+
+/* Theme toggle button in light mode */
+.cotrimdev-retro-theme.theme-light #theme-toggle {
+    border-color: #1a7220 !important;
+    color: #1a7220 !important;
+}
+
+.cotrimdev-retro-theme.theme-light #theme-toggle:hover {
+    background-color: #1a7220 !important;
+    color: #eff1f5 !important;
+}
+
+/* Skip to content link */
+.cotrimdev-retro-theme.theme-light .skip-link,
+.cotrimdev-retro-theme.theme-light a.screen-reader-text,
+.cotrimdev-retro-theme.theme-light .wp-block-navigation__responsive-container-open,
+.cotrimdev-retro-theme.theme-light [class*="skip"] {
+    color: #4c4f69 !important;
+}
+
+/* General paragraph text in light theme */
+.cotrimdev-retro-theme.theme-light p {
+    color: #1a7220;
+}
+
+/* Footer small text */
+.cotrimdev-retro-theme.theme-light footer p,
+.cotrimdev-retro-theme.theme-light .wp-block-template-part[data-area="footer"] p {
     color: #4c4f69 !important;
 }
 
