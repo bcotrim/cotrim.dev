@@ -1,33 +1,26 @@
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}},"border":{"bottom":{"color":"var:preset|color|terminal-gray","width":"1px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--terminal-gray);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
+<!-- wp:group {"className":"con-shell","tagName":"header","layout":{"type":"default"}} -->
+<header class="wp-block-group con-shell">
 
-    <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-    <div class="wp-block-group">
+	<!-- wp:html -->
+	<div class="con-lights" aria-hidden="true">
+		<span></span><span></span><span></span>
+	</div>
+	<!-- /wp:html -->
 
-        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-        <div class="wp-block-group">
+	<!-- wp:html -->
+	<div class="con-path" data-con-path>
+		<span class="con-path-host">bernardo@cotrim.dev</span>
+		<span class="con-path-sep"> — </span>
+		<span class="con-path-cur">~</span>
+	</div>
+	<!-- /wp:html -->
 
-            <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|terminal-amber"},"typography":{"fontWeight":"700"}}} -->
-            <p class="has-text-color" style="color:var(--wp--preset--color--terminal-amber);font-weight:700">guest@</p>
-            <!-- /wp:paragraph -->
+	<!-- wp:navigation {"overlayMenu":"mobile","overlayBackgroundColor":"bg","overlayTextColor":"ink","icon":"menu","className":"con-nav","layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"20px"}}} -->
+		<!-- wp:navigation-link {"label":"~","url":"/","kind":"custom","isTopLevelLink":true} /-->
+		<!-- wp:navigation-link {"label":"~/blog","url":"/blog","kind":"custom","isTopLevelLink":true} /-->
+		<!-- wp:navigation-link {"label":"~/projects","url":"/projects","kind":"custom","isTopLevelLink":true} /-->
+		<!-- wp:navigation-link {"label":"~/now","url":"/now","kind":"custom","isTopLevelLink":true} /-->
+	<!-- /wp:navigation -->
 
-            <!-- wp:site-title {"style":{"color":{"text":"var:preset|color|terminal-amber"},"elements":{"link":{"color":{"text":"var:preset|color|terminal-amber"},":hover":{"color":{"text":"var:preset|color|terminal-green"}}}}}} /-->
-
-            <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|terminal-amber"},"typography":{"fontWeight":"700"}}} -->
-            <p class="has-text-color" style="color:var(--wp--preset--color--terminal-amber);font-weight:700">:~$</p>
-            <!-- /wp:paragraph -->
-
-        </div>
-        <!-- /wp:group -->
-
-        <!-- wp:navigation {"overlayMenu":"mobile","layout":{"type":"flex"},"overlayBackgroundColor":"terminal-bg","overlayTextColor":"terminal-green","fontSize":"medium","style":{"spacing":{"blockGap":"var:preset|spacing|50"}}} -->
-            <!-- wp:navigation-link {"label":"Home","url":"/","kind":"custom","isTopLevelLink":true} /-->
-            <!-- wp:navigation-link {"label":"Blog","url":"/blog","kind":"custom","isTopLevelLink":true} /-->
-            <!-- wp:navigation-link {"label":"GitHub","url":"https://github.com/bcotrim","kind":"custom","isTopLevelLink":true} /-->
-        <!-- /wp:navigation -->
-
-    </div>
-    <!-- /wp:group -->
-
-</div>
+</header>
 <!-- /wp:group -->

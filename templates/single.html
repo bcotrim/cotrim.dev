@@ -1,65 +1,43 @@
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<!-- wp:html -->
+<div class="con-progress" data-con-progress aria-hidden="true"><div class="con-progress-fill"></div></div>
+<!-- /wp:html -->
 
-    <!-- wp:group {"layout":{"type":"constrained","contentSize":"800px"}} -->
-    <div class="wp-block-group">
+<!-- wp:group {"tagName":"main","className":"con-article","layout":{"type":"default"}} -->
+<main class="wp-block-group con-article">
 
-        <!-- wp:post-title {"level":1,"style":{"color":{"text":"var:preset|color|terminal-amber"}}} /-->
+	<!-- wp:shortcode -->
+	[con_post_breadcrumbs]
+	<!-- /wp:shortcode -->
 
-        <!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|50"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
-        <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--50)">
+	<!-- wp:shortcode -->
+	[con_post_meta]
+	<!-- /wp:shortcode -->
 
-            <!-- wp:post-date {"style":{"color":{"text":"var:preset|color|terminal-gray"}}} /-->
+	<!-- wp:post-title {"level":1,"className":"con-h1-post"} /-->
 
-            <!-- wp:paragraph {"style":{"color":{"text":"var:preset|color|terminal-gray"}}} -->
-            <p class="has-text-color" style="color:var(--wp--preset--color--terminal-gray)">•</p>
-            <!-- /wp:paragraph -->
+	<!-- wp:shortcode -->
+	[con_post_dek]
+	<!-- /wp:shortcode -->
 
-            <!-- wp:post-author {"showAvatar":false,"style":{"color":{"text":"var:preset|color|terminal-gray"}}} /-->
+	<!-- wp:html -->
+	<hr class="con-rule" style="margin:0 0 30px" />
+	<!-- /wp:html -->
 
-        </div>
-        <!-- /wp:group -->
+	<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
 
-        <!-- wp:separator {"style":{"color":{"background":"var:preset|color|terminal-gray"}}} -->
-        <hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background" style="background-color:var(--wp--preset--color--terminal-gray);color:var(--wp--preset--color--terminal-gray)"/>
-        <!-- /wp:separator -->
+	<!-- wp:html -->
+	<hr class="con-rule" style="margin:40px 0 24px" />
+	<!-- /wp:html -->
 
-        <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+	<!-- wp:shortcode -->
+	[con_post_tags]
+	<!-- /wp:shortcode -->
 
-        <!-- wp:separator {"style":{"color":{"background":"var:preset|color|terminal-gray"},"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
-        <hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background" style="background-color:var(--wp--preset--color--terminal-gray);color:var(--wp--preset--color--terminal-gray);margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)"/>
-        <!-- /wp:separator -->
-
-        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-        <div class="wp-block-group">
-
-            <!-- wp:post-navigation-link {"type":"previous","label":"← Previous Post"} /-->
-
-            <!-- wp:post-navigation-link {"label":"Next Post →"} /-->
-
-        </div>
-        <!-- /wp:group -->
-
-        <!-- wp:spacer {"height":"var:preset|spacing|60"} -->
-        <div style="height:var(--wp--preset--spacing--60)" aria-hidden="true" class="wp-block-spacer"></div>
-        <!-- /wp:spacer -->
-
-        <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-        <div class="wp-block-buttons">
-            <!-- wp:button -->
-            <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/">[← Back to Home]</a></div>
-            <!-- /wp:button -->
-
-            <!-- wp:button {"backgroundColor":"terminal-amber","textColor":"terminal-black"} -->
-            <div class="wp-block-button"><a class="wp-block-button__link has-terminal-black-color has-terminal-amber-background-color has-text-color has-background wp-element-button" href="/blog">[View All Posts]</a></div>
-            <!-- /wp:button -->
-        </div>
-        <!-- /wp:buttons -->
-
-    </div>
-    <!-- /wp:group -->
+	<!-- wp:shortcode -->
+	[con_post_prevnext]
+	<!-- /wp:shortcode -->
 
 </main>
 <!-- /wp:group -->

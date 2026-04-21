@@ -1,95 +1,62 @@
-# Cotrim.dev Retro Terminal Theme
+# cotrim.dev — Console
 
-A WordPress block theme with a retro terminal/DOS aesthetic for personal blogs, featuring Catppuccin color schemes.
+A dark, terminal-native WordPress block theme for [cotrim.dev](https://cotrim.dev). Child of **Twenty Twenty-Five**.
 
-## Features
+The whole site reads as one long-running terminal session: shell chrome at the top, a live status bar at the bottom, `~$` prompts as section headings, and signal-green accents for anything live.
 
-- **Dual Theme Support**: Dark mode (Catppuccin Mocha) and light mode (Catppuccin Latte)
-- **Theme Toggle**: One-click switching between themes with localStorage persistence
-- Command-line inspired design elements
-- Fully responsive and mobile-friendly
-- Block editor (FSE) compatible
-- Catppuccin color palette integration
-- Subtle scanline effects for retro CRT feel
-- Professional yet playful terminal styling
+## Design
 
-## Color Palettes
+- **Dark only.** `#0A0C0F` background, no theme toggle.
+- **Type.** Manrope (sans) + JetBrains Mono (mono), loaded from Google Fonts.
+- **Palette.** Ink, mute, dim, faint on neutrals; green/blue/amber/pink as signal colors.
+- **No shadows.** Hairlines (`--line`, `--line-bold`) and background contrast do the separation.
+- **Live bits.** Uptime counter in the footer, pulse dots, blinking caret, scroll-progress bar on posts.
 
-### Catppuccin Mocha (Dark - Default)
-- **Base**: `#1e1e2e` - Background
-- **Crust**: `#11111b` - Darker backgrounds (code blocks)
-- **Green**: `#a6e3a1` - Primary text
-- **Peach**: `#fab387` - Accents and highlights
-- **Surface 2**: `#585b70` - Borders and muted elements
-- **Text**: `#cdd6f4` - High contrast text
-- **Sky**: `#89dceb` - Links
-- **Red**: `#f38ba8` - Errors
+## Pages
 
-### Catppuccin Latte (Light)
-- **Base**: `#eff1f5` - Background
-- **Surface 0**: `#ccd0da` - Darker backgrounds
-- **Green**: `#40a02b` - Primary text
-- **Peach**: `#fe640b` - Accents
-- **Text**: `#4c4f69` - Main text
-- **Subtext 1**: `#5c5f77` - Secondary text
-- **Blue**: `#1e66f5` - Links
-- **Red**: `#d20f39` - Errors
-
-## Typography
-
-- **Font Family**: JetBrains Mono, Fira Code, Consolas, Monaco, Courier New, monospace
-- All text uses monospace fonts for authentic terminal feel
-
-## Templates
-
-- `front-page.html` - Single-page home layout with about, blog, and projects sections
-- `home.html` - Blog archive page
-- `single.html` - Individual blog post
-- `archive.html` - Category/tag archives
-
-## Template Parts
-
-- `header.html` - Site header with terminal prompt and navigation
-- `footer.html` - Site footer with social links and system info
+- **Home** — `~$ whoami` hero, recent posts, projects preview
+- **Blog** — year-grouped post list with tag filter (`essay`, `note`, `link`)
+- **Post** — reading view with breadcrumbs, meta strip, tags, prev/next
+- **Projects** — card list with HTML-attribute-style metadata (custom page template)
+- **Now** — 2×3 grid of "what I'm up to" cards + uptime block (custom page template)
+- **404** — giant `404` + `cd` shortcuts back to safety
 
 ## Installation
 
-1. Ensure you have **Twenty Twenty-Five** theme installed (this is a child theme)
-2. Upload the `cotrimdev-retro` folder to `wp-content/themes/`
-3. Activate the theme from WordPress admin
-4. The theme toggle button will appear automatically in the navigation menu
+1. Make sure **Twenty Twenty-Five** is installed (this is a child theme).
+2. Upload to `wp-content/themes/cotrim.dev/`.
+3. Activate under Appearance → Themes.
+4. Create two Pages, assign their templates:
+   - `/projects` → Template: **Projects**
+   - `/now` → Template: **Now**
+5. Tag posts with `essay`, `note`, or `link` so the row colors and the blog filter pills work.
 
-## Customization
+## How it's built
 
-The theme can be customized through:
-- `theme.json` - Global styles and WordPress block settings
-- `assets/css/terminal.css` - Custom CSS effects and color variables
-- `assets/js/theme-toggle.js` - Theme switching functionality
-- Site Editor in WordPress admin for content and layout
+Five moving parts — see [`CLAUDE.md`](./CLAUDE.md) for the full architecture notes:
 
-## Credits
+- `theme.json` — palette, font families, spacing scale, custom template registrations.
+- `assets/css/terminal.css` — all visual rules, scoped under `.cotrimdev-retro-theme`.
+- `assets/js/console.js` — uptime tick, current-path label, active-nav, blog filter, reading progress.
+- `functions.php` — shortcodes (`[con_postlist]`, `[con_archive_list]`, `[con_post_*]`) that render the console-specific row layouts the Query Loop block can't express.
+- `templates/` + `parts/` — block-theme templates and shell header/footer.
 
-- Built as a child theme of **Twenty Twenty-Five**
-- Color scheme: [Catppuccin](https://catppuccin.com/) (Mocha and Latte flavors)
-- Designed for [cotrim.dev](https://cotrim.dev) personal blog
-- Created by Bernardo Cotrim
+## Customising
+
+- **Uptime since.** Change `data-since="2024-06-01T00:00:00Z"` in `parts/footer.html`, and on the Now page.
+- **Copy.** The Projects, Now, and 404 pages have copy hard-coded in their templates; posts and the home lede are authored in WP.
+- **Colors.** All palette values live in `theme.json` (`settings.color.palette`) and `assets/css/terminal.css` (`:root` custom properties). Keep both in sync.
 
 ## Requirements
 
-- WordPress 6.4 or higher
+- WordPress 6.4+
 - Twenty Twenty-Five parent theme
-- PHP 7.4 or higher
-
-## Browser Support
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile responsive design
-- Graceful degradation for older browsers
+- PHP 7.4+
 
 ## License
 
-GPL v2 or later
+GPL v2 or later.
 
 ---
 
-Made with ❤️ using Catppuccin colors
+Built by [Bernardo Cotrim](https://cotrim.dev).
