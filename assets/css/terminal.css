@@ -36,11 +36,10 @@ body.cotrimdev-retro-theme {
 	min-height: 100dvh;
 	display: flex;
 	flex-direction: column;
-	overflow-x: hidden;
 }
 
 html, body.cotrimdev-retro-theme {
-	max-width: 100vw;
+	overflow-x: clip;
 }
 
 body.cotrimdev-retro-theme > .wp-site-blocks {
@@ -346,6 +345,7 @@ body.cotrimdev-retro-theme footer.con-status {
 	letter-spacing: -1.4px;
 	line-height: 1.05;
 	text-wrap: balance;
+	overflow-wrap: break-word;
 	margin: 0 0 20px;
 	color: var(--ink);
 }
@@ -760,6 +760,7 @@ body.cotrimdev-retro-theme footer.con-status {
 	color: var(--ink);
 	margin: 0 0 18px;
 	text-wrap: pretty;
+	overflow-wrap: break-word;
 }
 
 .con-article h2,
@@ -978,11 +979,32 @@ hr.wp-block-separator,
 
 	.con-page,
 	.con-page--404,
-	.con-article { overflow-x: hidden; }
+	.con-article {
+		overflow-x: clip;
+		max-width: 100%;
+	}
+
+	.con-article .wp-block-post-content,
+	.con-article .wp-block-post-content > * {
+		max-width: 100%;
+	}
+
+	.con-article img,
+	.con-article iframe,
+	.con-article video,
+	.con-article pre,
+	.con-article table {
+		max-width: 100%;
+	}
 
 	.con-hero { font-size: 34px; letter-spacing: -1px; }
-	.con-h1-page { font-size: 30px; letter-spacing: -0.8px; }
-	.con-h1-post { font-size: 30px; letter-spacing: -0.8px; }
+	.con-h1-page,
+	h1.con-h1-page { font-size: 30px; letter-spacing: -0.8px; }
+	.con-h1-post,
+	h1.con-h1-post { font-size: 30px; letter-spacing: -0.8px; }
+
+	.con-article h2,
+	.con-article .wp-block-post-content h2 { overflow-wrap: break-word; }
 
 	.con-lede,
 	.con-subhead,
