@@ -813,6 +813,83 @@ body.cotrimdev-retro-theme footer.con-status {
 	color: var(--ink);
 }
 
+/* -------- tables ---------------------------------------------- */
+
+.con-article .wp-block-table {
+	margin: 10px 0 28px;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.con-article .wp-block-table table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: var(--mono);
+	font-size: 13px;
+	line-height: 1.6;
+	color: var(--ink);
+	border: 1px solid var(--line-bold);
+	border-radius: 8px;
+	overflow: hidden; /* clip corners on the outer border */
+}
+
+.con-article .wp-block-table thead {
+	background: var(--surface);
+}
+
+.con-article .wp-block-table thead th {
+	padding: 10px 14px;
+	text-align: left;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--green);
+	border-bottom: 1px solid var(--line-bold);
+}
+
+.con-article .wp-block-table tbody tr {
+	border-bottom: 1px solid var(--line);
+	transition: background 0.1s ease;
+}
+
+.con-article .wp-block-table tbody tr:last-child {
+	border-bottom: none;
+}
+
+.con-article .wp-block-table tbody tr:nth-child(even) {
+	background: rgba(255, 255, 255, 0.025);
+}
+
+.con-article .wp-block-table tbody tr:hover {
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.con-article .wp-block-table td,
+.con-article .wp-block-table th {
+	padding: 9px 14px;
+	vertical-align: top;
+}
+
+.con-article .wp-block-table tfoot td {
+	padding: 9px 14px;
+	font-size: 11px;
+	color: var(--dim);
+	border-top: 1px solid var(--line-bold);
+}
+
+/* striped style variant */
+.con-article .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background: var(--surface);
+}
+.con-article .wp-block-table.is-style-stripes tbody tr:nth-child(even) {
+	background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.con-article .wp-block-table tbody tr { transition: none; }
+}
+
 .con-article figure.wp-block-image img {
 	border: 1px solid var(--line);
 	border-radius: 8px;
