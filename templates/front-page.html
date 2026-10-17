@@ -4,31 +4,25 @@
 <main class="wp-block-group con-page">
 
 	<!-- wp:html -->
-	<p class="con-prompt"><span class="sign">~$</span> <span class="cmd">whoami</span></p>
+	<section class="con-hero" data-con-hero>
+		<p class="con-prompt"><span class="sign">~ $</span> <span class="cmd" data-con-type>whoami</span></p>
+		<div class="con-hero-text">
+		<h1 class="con-hero-name" data-boot>Bernardo Cotrim</h1>
+		<p class="con-role" data-boot>Software engineer at Automattic, building <b>WordPress Studio</b>.</p>
+		<p class="con-lede" data-boot>14 yrs on the web. Portugal. Wife, two kids, three cats, a dog. Always something going on, and it's amazing.</p>
+		<div class="con-links" data-boot>
+			<a href="https://github.com/bcotrim"><svg class="con-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>github</a>
+			<a href="https://linkedin.com/in/bcotrim"><svg class="con-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>linkedin</a>
+			<a href="mailto:bernardo@cotrim.dev"><svg class="con-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>mail</a>
+			<a href="/feed/"><svg class="con-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>rss</a>
+		</div>
+		</div>
+		[con_portrait]
+	</section>
 	<!-- /wp:html -->
 
 	<!-- wp:html -->
-	<h1 class="con-hero">Bernardo Cotrim — <span class="con-accent-green">software engineer</span> at Automattic, on WordPress Studio.</h1>
-	<!-- /wp:html -->
-
-	<!-- wp:html -->
-	<p class="con-lede">14 yrs on the web. Portugal. Wife, two kids, three cats, a dog. Always something going on, and it's amazing.</p>
-	<!-- /wp:html -->
-
-	<!-- wp:html -->
-	<div class="con-chip-row">
-		<a class="con-chip" href="https://github.com/bcotrim"><span class="dot con-accent-green"></span>[github]</a>
-		<a class="con-chip" href="https://linkedin.com/in/bcotrim"><span class="dot con-accent-blue"></span>[linkedin]</a>
-		<a class="con-chip" href="mailto:bernardo@cotrim.dev"><span class="dot con-accent-amber"></span>[mail]</a>
-	</div>
-	<!-- /wp:html -->
-
-	<!-- wp:html -->
-	<hr class="con-rule" />
-	<!-- /wp:html -->
-
-	<!-- wp:html -->
-	<p class="con-prompt"><span class="sign">~$</span> <span class="cmd">cat blog/</span> <span class="note"># recent</span></p>
+	<p class="con-eyebrow"><span><span class="sign">~ $</span> ls blog/ &#45;&#45;recent</span><a href="/blog">view all →</a></p>
 	<!-- /wp:html -->
 
 	<!-- wp:shortcode -->
@@ -36,41 +30,39 @@
 	<!-- /wp:shortcode -->
 
 	<!-- wp:html -->
-	<p class="con-inline-prompt" style="margin-top:12px">
-		<a href="/blog"><span class="sign">~$</span> <span class="cmd">ls -la archive/</span> <span class="note"># view all →</span></a>
-	</p>
+	<p class="con-eyebrow con-section"><span><span class="sign">~ $</span> ls projects/</span><a href="/projects">all projects →</a></p>
 	<!-- /wp:html -->
 
 	<!-- wp:html -->
-	<hr class="con-rule" style="margin:36px 0 32px" />
-	<!-- /wp:html -->
-
-	<!-- wp:html -->
-	<p class="con-prompt"><span class="sign">~$</span> <span class="cmd">ls projects/</span></p>
-	<!-- /wp:html -->
-
-	<!-- wp:html -->
-	<div class="con-projlist">
-		<a class="con-row" href="/projects">
-			<span class="col-title con-accent-green"><span class="con-title">wordpress-studio/</span></span>
-			<span class="col-desc">local WP dev env — Automattic</span>
-			<span class="col-year">2024—</span>
+	<div class="con-card-grid">
+		<a class="con-card" href="https://github.com/Automattic/studio">
+			<span class="con-card-name">wordpress-studio<svg class="con-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+			<p>Local WordPress dev environment. Desktop app and CLI, powered by Playground.</p>
+			<span class="con-card-meta">2024 — now</span>
 		</a>
-		<a class="con-row" href="/projects">
-			<span class="col-title con-accent-blue"><span class="con-title">wpcom-dev-tools/</span></span>
-			<span class="col-desc">workflow &amp; automation</span>
-			<span class="col-year">2021—</span>
+		<a class="con-card" href="/projects">
+			<span class="con-card-name">wpcom-dev-tools<svg class="con-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+			<p>Workflow and automation tooling for WordPress.com engineers.</p>
+			<span class="con-card-meta">2021 — now</span>
 		</a>
-		<a class="con-row" href="/projects">
-			<span class="col-title con-accent-amber"><span class="con-title">cotrim.dev/</span></span>
-			<span class="col-desc">this website — dog food</span>
-			<span class="col-year">2025</span>
+		<a class="con-card" href="https://github.com/bcotrim/cotrim.dev">
+			<span class="con-card-name">cotrim.dev<svg class="con-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+			<p>This website. A block theme with no build step. Dog food.</p>
+			<span class="con-card-meta">2025</span>
 		</a>
 	</div>
 	<!-- /wp:html -->
 
 	<!-- wp:html -->
-	<p class="con-inline-prompt"><span class="sign">~$</span> _<span class="con-caret" aria-hidden="true"></span></p>
+	<p class="con-eyebrow con-section"><span><span class="sign">~ $</span> cat now.md</span><a href="/now">/now →</a></p>
+	<!-- /wp:html -->
+
+	<!-- wp:html -->
+	<dl class="con-kv">
+		<div><dt>shipping</dt><dd>Studio 1.8 — sync to WP.com</dd></div>
+		<div><dt>reading</dt><dd>The Timeless Way of Building — C. Alexander</dd></div>
+		<div><dt>building</dt><dd>This website. Hello.</dd></div>
+	</dl>
 	<!-- /wp:html -->
 
 </main>
