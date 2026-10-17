@@ -18,6 +18,7 @@
 	--green-wash: color-mix(in srgb, var(--green) 10%, transparent);
 	--green-line: color-mix(in srgb, var(--green) 32%, transparent);
 	--green-glow: color-mix(in srgb, var(--green) 22%, transparent);
+	--green-spot: color-mix(in srgb, var(--green) 12%, transparent);
 	--blue-wash: color-mix(in srgb, var(--blue) 10%, transparent);
 	--amber-wash: color-mix(in srgb, var(--amber) 10%, transparent);
 	--hover: color-mix(in srgb, var(--ink) 4%, transparent);
@@ -249,7 +250,62 @@ body.cotrimdev-retro-theme .wp-site-blocks > footer {
 
 .con-section { margin-top: 64px; }
 
-.con-hero { padding: 16px 0 72px; }
+.con-hero {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-areas: "prompt prompt" "text art";
+	column-gap: 32px;
+	padding: 16px 0 72px;
+}
+
+.con-hero > .con-prompt { grid-area: prompt; }
+.con-hero-text { grid-area: text; min-width: 0; }
+
+.con-portrait {
+	grid-area: art;
+	align-self: start;
+	position: relative;
+	margin: 4px 0 0;
+	font: 400 5.2px/1 var(--mono);
+	letter-spacing: 0;
+	color: var(--green);
+	user-select: none;
+	overflow: visible;
+}
+
+.con-portrait .t1 { color: color-mix(in srgb, var(--green) 40%, transparent); }
+.con-portrait .t2 { color: color-mix(in srgb, var(--green) 62%, transparent); }
+.con-portrait .t3 { color: color-mix(in srgb, var(--green) 86%, transparent); }
+.con-portrait .t4 { color: var(--green-hi); text-shadow: 0 0 6px var(--green-glow); }
+
+.con-portrait::after {
+	content: "";
+	position: absolute;
+	left: -6px;
+	right: -6px;
+	top: -24px;
+	height: 24px;
+	border-bottom: 1px solid var(--green);
+	background: linear-gradient(to bottom, transparent, var(--green-spot));
+	box-shadow: 0 6px 12px -6px var(--green-glow);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.con-portrait.is-rendering::after { animation: con-sweep 900ms var(--ease) forwards; }
+
+.con-js .con-portrait:not(.is-live) { visibility: hidden; }
+
+.con-boot .con-hero [data-boot]:not(.is-shown) { opacity: 0; }
+.con-boot .con-hero [data-con-type]:not(.is-typing) { visibility: hidden; }
+.con-hero [data-boot].is-shown { animation: con-print 260ms var(--ease) both; }
+
+.con-caret--inline {
+	width: 0.5em;
+	height: 1em;
+	margin-left: 2px;
+	vertical-align: -0.15em;
+}
 
 .con-hero-name,
 .con-h1-page {
@@ -382,6 +438,12 @@ body.cotrimdev-retro-theme .wp-site-blocks > footer {
 	color: var(--ink);
 }
 
+.con-postlist .col-title .t {
+	display: block;
+	width: fit-content;
+	max-width: 100%;
+}
+
 .con-postlist .col-title small {
 	display: block;
 	margin-top: 2px;
@@ -461,6 +523,28 @@ body.cotrimdev-retro-theme .wp-site-blocks > footer {
 	text-decoration: none;
 	transition: box-shadow var(--fast) var(--ease), border-color var(--fast) var(--ease), background var(--fast) var(--ease);
 }
+
+.con-card,
+.con-project-card {
+	position: relative;
+	isolation: isolate;
+}
+
+.con-card::before,
+.con-project-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	border-radius: inherit;
+	background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), var(--green-spot), transparent 70%);
+	opacity: 0;
+	transition: opacity var(--fast) var(--ease);
+	pointer-events: none;
+}
+
+.con-card:hover::before,
+.con-project-card:hover::before { opacity: 1; }
 
 .con-card {
 	display: flex;
@@ -680,6 +764,7 @@ body.cotrimdev-retro-theme .wp-site-blocks > footer {
 
 .con-h1-post,
 h1.con-h1-post {
+	width: fit-content;
 	font: 600 44px/1.12 var(--sans);
 	letter-spacing: -0.03em;
 	color: var(--ink);
@@ -957,6 +1042,40 @@ hr.wp-block-separator,
 	margin: 40px 0;
 }
 
+.con-js .con-postlist .con-row,
+.con-js .con-card,
+.con-js .con-project-card,
+.con-js .con-now-card,
+.con-js .con-kv > div { opacity: 0; }
+
+.con-js .is-in {
+	animation: con-print 280ms var(--ease) both;
+	animation-delay: var(--d, 0ms);
+}
+
+@view-transition { navigation: auto; }
+
+.wp-site-blocks > header.wp-block-template-part { view-transition-name: con-header; }
+
+::view-transition-group(*) {
+	animation-duration: 320ms;
+	animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 200ms; }
+
+@keyframes con-print {
+	from { opacity: 0; transform: translateY(4px); }
+	to { opacity: 1; transform: none; }
+}
+
+@keyframes con-sweep {
+	0% { top: -24px; opacity: 1; }
+	88% { opacity: 1; }
+	100% { top: 100%; opacity: 0; }
+}
+
 @keyframes con-blink {
 	0%, 50% { opacity: 1; }
 	50.01%, 100% { opacity: 0; }
@@ -968,6 +1087,8 @@ hr.wp-block-separator,
 }
 
 @media (prefers-reduced-motion: reduce) {
+	@view-transition { navigation: none; }
+
 	.cotrimdev-retro-theme *,
 	.cotrimdev-retro-theme *::before {
 		animation: none !important;
@@ -979,7 +1100,12 @@ hr.wp-block-separator,
 	.cotrimdev-retro-theme { --side: 16px; }
 
 	.con-page { padding-top: 48px; padding-bottom: 56px; }
-	.con-hero { padding: 8px 0 56px; }
+	.con-hero {
+		grid-template-columns: 1fr;
+		grid-template-areas: "prompt" "art" "text";
+		padding: 8px 0 56px;
+	}
+	.con-portrait { font-size: 4.2px; margin: 0 0 28px; justify-self: center; left: 7.5ch; }
 	.con-hero-name { font-size: 36px; }
 	.con-h1-page { font-size: 32px; }
 	.con-role { font-size: 19px; }

@@ -75,6 +75,55 @@ function cotrimdev_body_class( $classes ) {
 }
 add_filter( 'body_class', 'cotrimdev_body_class' );
 
+// Runs before first paint so animated elements never flash; the 4s timeout un-hides the hero if console.js fails.
+function cotrimdev_motion_flags() {
+	$boot = is_front_page() ? 'true' : 'false';
+	$js   = "(function(){var d=document.documentElement;if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.classList.add('con-js');var b={$boot};try{if(sessionStorage.getItem('con-booted'))b=false;}catch(e){}if(b){d.classList.add('con-boot');setTimeout(function(){d.classList.remove('con-boot');},4000);}})();";
+	wp_print_inline_script_tag( $js );
+}
+add_action( 'wp_head', 'cotrimdev_motion_flags', 1 );
+
+function cotrimdev_post_title_transition( $content ) {
+	if ( ! is_singular( 'post' ) ) {
+		return $content;
+	}
+	return preg_replace( '/^<h1\b/', '<h1 style="view-transition-name:con-post-' . (int) get_queried_object_id() . '"', ltrim( $content ), 1 );
+}
+add_filter( 'render_block_core/post-title', 'cotrimdev_post_title_transition' );
+
+function cotrimdev_sc_portrait() {
+	$path = get_stylesheet_directory() . '/assets/portrait.txt';
+	if ( ! is_readable( $path ) ) {
+		return '';
+	}
+	$tones = array(
+		'.' => 1, ',' => 1, ':' => 1,
+		';' => 2, '-' => 2, '~' => 2, '=' => 2,
+		'+' => 3, '*' => 3, 'o' => 3,
+		'#' => 4, '%' => 4, '@' => 4,
+	);
+	$lines = explode( "\n", rtrim( file_get_contents( $path ) ) );
+	$out   = array();
+	foreach ( $lines as $line ) {
+		$html = '';
+		$run  = '';
+		$tone = 0;
+		foreach ( str_split( $line ) as $ch ) {
+			$t = isset( $tones[ $ch ] ) ? $tones[ $ch ] : 0;
+			if ( $t !== $tone ) {
+				$html .= $tone ? '<span class="t' . $tone . '">' . esc_html( $run ) . '</span>' : $run;
+				$run   = '';
+				$tone  = $t;
+			}
+			$run .= $ch;
+		}
+		$html .= $tone ? '<span class="t' . $tone . '">' . esc_html( $run ) . '</span>' : $run;
+		$out[] = $html;
+	}
+	return '<pre class="con-portrait" data-con-portrait data-boot role="img" aria-label="ASCII portrait of Bernardo Cotrim">' . implode( "\n", $out ) . '</pre>';
+}
+add_shortcode( 'con_portrait', 'cotrimdev_sc_portrait' );
+
 /**
  * Approximate reading time in minutes from a post's content (220 wpm).
  */
@@ -151,14 +200,15 @@ function cotrimdev_render_row( $post_id ) {
 	$excerpt = get_post_field( 'post_excerpt', $post_id );
 
 	return sprintf(
-		'<a class="con-row" href="%1$s" data-tag="%2$s" data-year="%3$s"><span class="col-num">#%4$03d</span><span class="col-title">%5$s%6$s</span><span class="con-badge con-badge--%2$s">%2$s</span><span class="col-date">%7$s</span></a>',
+		'<a class="con-row" href="%1$s" data-tag="%2$s" data-year="%3$s"><span class="col-num">#%4$03d</span><span class="col-title"><span class="t" style="view-transition-name:con-post-%8$d">%5$s</span>%6$s</span><span class="con-badge con-badge--%2$s">%2$s</span><span class="col-date">%7$s</span></a>',
 		esc_url( $url ),
 		esc_attr( $tag ),
 		esc_attr( $year ),
 		(int) $num,
 		esc_html( $title ),
 		$excerpt ? '<small>' . esc_html( $excerpt ) . '</small>' : '',
-		esc_html( $date )
+		esc_html( $date ),
+		(int) $post_id
 	);
 }
 
@@ -340,20 +390,22 @@ function cotrimdev_sc_post_prevnext() {
 	$out = '<nav class="con-prevnext">';
 	if ( $prev ) {
 		$out .= sprintf(
-			'<a class="con-prevnext-card con-prevnext-card--prev" href="%1$s"><span class="con-prevnext-eyebrow">← #%2$03d</span><span class="con-prevnext-title">%3$s</span></a>',
+			'<a class="con-prevnext-card con-prevnext-card--prev" href="%1$s"><span class="con-prevnext-eyebrow">← #%2$03d</span><span class="con-prevnext-title" style="view-transition-name:con-post-%4$d">%3$s</span></a>',
 			esc_url( get_permalink( $prev->ID ) ),
 			(int) cotrimdev_post_number( $prev->ID ),
-			esc_html( get_the_title( $prev->ID ) )
+			esc_html( get_the_title( $prev->ID ) ),
+			(int) $prev->ID
 		);
 	} else {
 		$out .= '<span></span>';
 	}
 	if ( $next ) {
 		$out .= sprintf(
-			'<a class="con-prevnext-card con-prevnext-card--next" href="%1$s"><span class="con-prevnext-eyebrow">#%2$03d →</span><span class="con-prevnext-title">%3$s</span></a>',
+			'<a class="con-prevnext-card con-prevnext-card--next" href="%1$s"><span class="con-prevnext-eyebrow">#%2$03d →</span><span class="con-prevnext-title" style="view-transition-name:con-post-%4$d">%3$s</span></a>',
 			esc_url( get_permalink( $next->ID ) ),
 			(int) cotrimdev_post_number( $next->ID ),
-			esc_html( get_the_title( $next->ID ) )
+			esc_html( get_the_title( $next->ID ) ),
+			(int) $next->ID
 		);
 	} else {
 		$out .= '<span></span>';
