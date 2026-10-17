@@ -265,30 +265,29 @@ add_shortcode( 'con_archive_header', 'cotrimdev_sc_archive_header' );
 function cotrimdev_sc_archive_list( $atts ) {
 	$atts = shortcode_atts( array( 'archive' => '0' ), $atts, 'con_archive_list' );
 
-	if ( '1' === (string) $atts['archive'] && ! is_main_query() ) {
-		// Let normal archive/term filtering drive results.
-		$post_ids = get_posts(
-			array(
-				'post_type'      => 'post',
-				'post_status'    => 'publish',
-				'posts_per_page' => -1,
-				'orderby'        => 'date',
-				'order'          => 'DESC',
-				'fields'         => 'ids',
-			)
-		);
-	} else {
-		$post_ids = get_posts(
-			array(
-				'post_type'      => 'post',
-				'post_status'    => 'publish',
-				'posts_per_page' => -1,
-				'orderby'        => 'date',
-				'order'          => 'DESC',
-				'fields'         => 'ids',
-			)
-		);
+	$query = array(
+		'post_type'      => 'post',
+		'post_status'    => 'publish',
+		'posts_per_page' => -1,
+		'orderby'        => 'date',
+		'order'          => 'DESC',
+		'fields'         => 'ids',
+	);
+
+	if ( '1' === (string) $atts['archive'] && ( is_tag() || is_category() ) ) {
+		$term = get_queried_object();
+		if ( $term instanceof WP_Term ) {
+			$query['tax_query'] = array(
+				array(
+					'taxonomy' => $term->taxonomy,
+					'field'    => 'term_id',
+					'terms'    => $term->term_id,
+				),
+			);
+		}
 	}
+
+	$post_ids = get_posts( $query );
 
 	if ( empty( $post_ids ) ) {
 		return '<div class="con-postlist"><p style="color:var(--mute);font-family:var(--sans)">No posts yet.</p></div>';
