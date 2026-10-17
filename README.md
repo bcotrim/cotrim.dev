@@ -1,22 +1,22 @@
-# cotrim.dev — Console
+# cotrim.dev
 
 A dark, terminal-native WordPress block theme for [cotrim.dev](https://cotrim.dev). Child of **Twenty Twenty-Five**.
 
-The whole site reads as one long-running terminal session: shell chrome at the top, a live status bar at the bottom, `~$` prompts as section headings, and signal-green accents for anything live.
+Built on the Cotrim design system: terminal voice (`~ $` prompts, mono labels, numbered posts) on calm, refined surfaces, with a single phosphor-green accent.
 
 ## Design
 
-- **Dark only.** `#0A0C0F` background, no theme toggle.
-- **Type.** Manrope (sans) + JetBrains Mono (mono), loaded from Google Fonts.
+- **Dark only.** `#0D0D0D` neutral charcoal background, no theme toggle.
+- **Type.** Geist (sans) + JetBrains Mono (mono), loaded from Google Fonts.
 - **Palette.** Ink, mute, dim, faint on neutrals; green/blue/amber/pink as signal colors.
-- **No shadows.** Hairlines (`--line`, `--line-bold`) and background contrast do the separation.
+- **No drop shadows.** Hairlines (`--line`, `--line-bold`) do the separation; a phosphor glow marks hover and focus.
 - **Live bits.** Uptime counter in the footer, pulse dots, blinking caret, scroll-progress bar on posts.
 
 ## Pages
 
 - **Home** — `~$ whoami` hero, recent posts, projects preview
 - **Blog** — year-grouped post list with tag filter (`essay`, `note`, `link`)
-- **Post** — reading view with breadcrumbs, meta strip, tags, prev/next
+- **Post** — reading view with back link, meta strip, tags, prev/next
 - **Projects** — card list with HTML-attribute-style metadata (custom page template)
 - **Now** — 2×3 grid of "what I'm up to" cards + uptime block (custom page template)
 - **404** — giant `404` + `cd` shortcuts back to safety
@@ -37,7 +37,7 @@ Five moving parts — see [`CLAUDE.md`](./CLAUDE.md) for the full architecture n
 
 - `theme.json` — palette, font families, spacing scale, custom template registrations.
 - `assets/css/terminal.css` — all visual rules, scoped under `.cotrimdev-retro-theme`.
-- `assets/js/console.js` — uptime tick, current-path label, active-nav, blog filter, reading progress.
+- `assets/js/console.js` — uptime tick, active-nav, blog filter, reading progress.
 - `functions.php` — shortcodes (`[con_postlist]`, `[con_archive_list]`, `[con_post_*]`) that render the console-specific row layouts the Query Loop block can't express.
 - `templates/` + `parts/` — block-theme templates and shell header/footer.
 

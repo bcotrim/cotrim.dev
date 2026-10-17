@@ -1,7 +1,7 @@
 /**
- * Console — cotrim.dev v2 runtime behaviors.
- * Pulse/blink/hover are CSS-only. JS handles live uptime, blog filter,
- * reading-progress bar, and current-path sync in the top chrome.
+ * Console — cotrim.dev v3 runtime behaviors.
+ * Pulse/blink/hover are CSS-only. JS handles live uptime, active nav,
+ * blog filter, and the reading-progress bar.
  */
 
 (function () {
@@ -29,18 +29,10 @@
 		setInterval(tickUptime, 1000);
 	}
 
-	function initPathLabel() {
-		const el = document.querySelector('[data-con-path] .con-path-cur');
-		if (!el) return;
-		const p = window.location.pathname.replace(/\/+$/, '');
-		if (!p || p === '') { el.textContent = '~'; return; }
-		el.textContent = '~' + p;
-	}
-
 	function initActiveNav() {
 		const items = document.querySelectorAll('.con-nav .wp-block-navigation-item');
 		if (!items.length) return;
-		const cur = window.location.pathname.replace(/\/+$/, '') || '/';
+		const cur = document.body.classList.contains('single-post') ? '/blog' : (window.location.pathname.replace(/\/+$/, '') || '/');
 		items.forEach((li) => {
 			const a = li.querySelector('a');
 			if (!a) return;
@@ -104,7 +96,6 @@
 
 	ready(() => {
 		initUptime();
-		initPathLabel();
 		initActiveNav();
 		initBlogFilter();
 		initReadingProgress();

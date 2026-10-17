@@ -39,7 +39,7 @@ function cotrimdev_enqueue_assets() {
 
 	wp_enqueue_style(
 		'cotrimdev-google-fonts',
-		'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap',
+		'https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap',
 		array(),
 		null
 	);
@@ -142,23 +142,23 @@ function cotrimdev_total_posts() {
  * Render one styled row for the console post list.
  */
 function cotrimdev_render_row( $post_id ) {
-	$num   = cotrimdev_post_number( $post_id );
-	$date  = get_the_date( 'Y.m.d', $post_id );
-	$title = get_the_title( $post_id );
-	$url   = get_permalink( $post_id );
-	$read  = cotrimdev_reading_time( $post_id );
-	$tag   = cotrimdev_primary_tag( $post_id );
-	$year  = get_the_date( 'Y', $post_id );
+	$num     = cotrimdev_post_number( $post_id );
+	$date    = get_the_date( 'Y.m.d', $post_id );
+	$title   = get_the_title( $post_id );
+	$url     = get_permalink( $post_id );
+	$tag     = cotrimdev_primary_tag( $post_id );
+	$year    = get_the_date( 'Y', $post_id );
+	$excerpt = get_post_field( 'post_excerpt', $post_id );
 
 	return sprintf(
-		'<a class="con-row" href="%1$s" data-tag="%2$s" data-year="%3$s"><span class="col-num">#%4$03d</span><span class="col-date">%5$s</span><span class="col-title"><span class="con-title">%6$s</span></span><span class="col-read">%7$s</span><span class="col-tag con-tag-%2$s">[%2$s]</span></a>',
+		'<a class="con-row" href="%1$s" data-tag="%2$s" data-year="%3$s"><span class="col-num">#%4$03d</span><span class="col-title">%5$s%6$s</span><span class="con-badge con-badge--%2$s">%2$s</span><span class="col-date">%7$s</span></a>',
 		esc_url( $url ),
 		esc_attr( $tag ),
 		esc_attr( $year ),
 		(int) $num,
-		esc_html( $date ),
 		esc_html( $title ),
-		esc_html( $read )
+		$excerpt ? '<small>' . esc_html( $excerpt ) . '</small>' : '',
+		esc_html( $date )
 	);
 }
 
@@ -200,8 +200,9 @@ function cotrimdev_sc_archive_header() {
 
 	ob_start();
 	?>
-	<p class="con-prompt"><span class="sign">~$</span> <span class="cmd">ls -la archive/</span> <span class="note"># <?php echo (int) $total; ?> total</span></p>
-	<h1 class="con-h1-page">Writing — <span class="con-accent-green"><?php echo (int) $total; ?></span> posts since <?php echo esc_html( $start ); ?>.</h1>
+	<p class="con-prompt"><span class="sign">~ $</span> ls &#45;la blog/</p>
+	<h1 class="con-h1-page">Writing</h1>
+	<p class="con-role"><?php echo (int) $total; ?> posts since <?php echo esc_html( $start ); ?>.</p>
 	<p class="con-subhead">Essays, short notes, and links. Mostly about tools, the web, and the craft of shipping small, durable things.</p>
 	<?php
 	return ob_get_clean();
@@ -255,7 +256,7 @@ function cotrimdev_sc_archive_list( $atts ) {
 	foreach ( $groups as $year => $ids ) {
 		$count = count( $ids );
 		$out  .= sprintf(
-			'<div data-year-group="%1$s"><div class="con-year"># %1$s — %2$d post%3$s</div>',
+			'<div data-year-group="%1$s"><div class="con-year"><span>%1$s</span><span>%2$d post%3$s</span></div>',
 			esc_attr( $year ),
 			$count,
 			1 === $count ? '' : 's'
@@ -275,41 +276,26 @@ add_shortcode( 'con_archive_list', 'cotrimdev_sc_archive_list' );
  */
 
 function cotrimdev_sc_post_breadcrumbs() {
-	$id  = get_the_ID();
-	$num = cotrimdev_post_number( $id );
 	return sprintf(
-		'<div class="con-breadcrumbs"><a href="%1$s">~</a><span class="sep"> / </span><a href="%2$s">blog</a><span class="sep"> / </span><span class="cur">#%3$03d</span></div>',
-		esc_url( home_url( '/' ) ),
-		esc_url( home_url( '/blog' ) ),
-		(int) $num
+		'<a class="con-back" href="%1$s"><svg class="con-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7M19 12H5"/></svg><span><span class="sign">~ $</span> cd ..</span></a>',
+		esc_url( home_url( '/blog' ) )
 	);
 }
 add_shortcode( 'con_post_breadcrumbs', 'cotrimdev_sc_post_breadcrumbs' );
 
 function cotrimdev_sc_post_meta() {
 	$id   = get_the_ID();
+	$num  = cotrimdev_post_number( $id );
 	$date = get_the_date( 'Y.m.d', $id );
 	$tag  = cotrimdev_primary_tag( $id );
 	$read = cotrimdev_reading_time( $id );
 
-	$terms = get_the_terms( $id, 'post_tag' );
-	$tags  = '';
-	if ( is_array( $terms ) ) {
-		foreach ( $terms as $t ) {
-			$tags .= sprintf(
-				' <a class="tag" href="%1$s">#%2$s</a>',
-				esc_url( get_term_link( $t ) ),
-				esc_html( $t->slug )
-			);
-		}
-	}
-
 	return sprintf(
-		'<div class="con-meta">%1$s <span class="dot">·</span> %2$s <span class="dot">·</span> %3$s read%4$s</div>',
+		'<div class="con-meta"><span class="num">#%1$03d</span><span class="con-badge con-badge--%2$s">%2$s</span><span>%3$s</span><span class="dot">·</span><span>%4$s read</span></div>',
+		(int) $num,
+		esc_attr( $tag ),
 		esc_html( $date ),
-		esc_html( $tag ),
-		esc_html( str_replace( 'm', ' min', $read ) ),
-		$tags
+		esc_html( str_replace( 'm', ' min', $read ) )
 	);
 }
 add_shortcode( 'con_post_meta', 'cotrimdev_sc_post_meta' );
@@ -330,10 +316,12 @@ function cotrimdev_sc_post_tags() {
 	if ( ! is_array( $terms ) || empty( $terms ) ) {
 		return '';
 	}
-	$links = '';
+	$primary = cotrimdev_primary_tag( $id );
+	$links   = '';
 	foreach ( $terms as $t ) {
 		$links .= sprintf(
-			'<a href="%1$s">#%2$s</a>',
+			'<a class="con-badge con-badge--%1$s" href="%2$s">%3$s</a>',
+			$t->slug === $primary ? esc_attr( $primary ) : 'plain',
 			esc_url( get_term_link( $t ) ),
 			esc_html( $t->slug )
 		);
@@ -349,30 +337,28 @@ function cotrimdev_sc_post_prevnext() {
 		return '';
 	}
 
-	$out  = '<div class="con-prevnext">';
+	$out = '<nav class="con-prevnext">';
 	if ( $prev ) {
-		$pnum = cotrimdev_post_number( $prev->ID );
 		$out .= sprintf(
-			'<a class="con-prevnext-card con-prevnext-card--prev" href="%1$s"><div class="con-prevnext-eyebrow">← prev · #%2$03d</div><div class="con-prevnext-title"><span class="con-title">%3$s</span></div></a>',
+			'<a class="con-prevnext-card con-prevnext-card--prev" href="%1$s"><span class="con-prevnext-eyebrow">← #%2$03d</span><span class="con-prevnext-title">%3$s</span></a>',
 			esc_url( get_permalink( $prev->ID ) ),
-			(int) $pnum,
+			(int) cotrimdev_post_number( $prev->ID ),
 			esc_html( get_the_title( $prev->ID ) )
 		);
 	} else {
 		$out .= '<span></span>';
 	}
 	if ( $next ) {
-		$nnum = cotrimdev_post_number( $next->ID );
 		$out .= sprintf(
-			'<a class="con-prevnext-card con-prevnext-card--next" href="%1$s"><div class="con-prevnext-eyebrow">next · #%2$03d →</div><div class="con-prevnext-title"><span class="con-title">%3$s</span></div></a>',
+			'<a class="con-prevnext-card con-prevnext-card--next" href="%1$s"><span class="con-prevnext-eyebrow">#%2$03d →</span><span class="con-prevnext-title">%3$s</span></a>',
 			esc_url( get_permalink( $next->ID ) ),
-			(int) $nnum,
+			(int) cotrimdev_post_number( $next->ID ),
 			esc_html( get_the_title( $next->ID ) )
 		);
 	} else {
 		$out .= '<span></span>';
 	}
-	$out .= '</div>';
+	$out .= '</nav>';
 	return $out;
 }
 add_shortcode( 'con_post_prevnext', 'cotrimdev_sc_post_prevnext' );
