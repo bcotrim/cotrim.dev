@@ -27,7 +27,7 @@ Visual + content rendering is split across four systems — understand their div
 
 ### Templates & parts
 
-- `templates/front-page.html` — home (whoami + recent posts shortcode + projects preview + status block)
+- `templates/front-page.html` — home (whoami + ASCII portrait + recent posts shortcode + project cards)
 - `templates/home.html` — blog archive page (prompt + H1 shortcode + filter pills + year-grouped list shortcode)
 - `templates/archive.html` — category/tag archives (same list shortcode)
 - `templates/single.html` — post reading view (shortcodes for back link, meta, dek, tags, prev/next; `[data-con-progress]` bar sits between header and article)
